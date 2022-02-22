@@ -17,9 +17,9 @@
 		<title>'t Smikkelhoekje</title>
 	</head>
 
-	<body class="d-flex flex-column h-100 w-100 min-vh-100 bg-dark">
+	<body class="d-flex flex-column h-100 w-100 min-vh-100 bg-secondary">
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="">'t Smikkelhoekje</a>
 					<button
@@ -43,8 +43,18 @@
 									class="nav-link active"
 									aria-current="page"
 									href=""
-									>Home</a
-								>
+									>Menu
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link">
+									Contact
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link">
+									Login
+								</a>
 							</li>
 						</ul>
 						<form class="d-flex">
@@ -63,14 +73,15 @@
 			</nav>
 		</header>
 
-		<div class="container bg-dark pb-3 h-100 text-light">
-			<main>
-				jo
+		<div class="container bg-secondary">
+			<main></main>
 			</main>
 		</div>
 
-		<footer class="border-top footer mt-auto pt-3 text-muted bg-dark">
-			&copy; yeet
+		<footer class="footer mt-auto pt-3 text-muted bg-dark">
+			<div class="container">
+				&copy; 't Smikkelhoekje
+			</div>
     	</footer>
 
 		<!-- Bootstrap -->
