@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Bootstrap -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -14,10 +15,12 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
 		/>
+		<!-- Eigen CSS -->
+		<link rel="stylesheet" href="css/main.css">
 		<title>'t Smikkelhoekje</title>
 	</head>
 
-	<body class="d-flex flex-column h-100 w-100 min-vh-100 bg-secondary">
+	<body class="d-flex flex-column min-vh-100">
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container-fluid">
@@ -73,12 +76,11 @@
 			</nav>
 		</header>
 
-		<div class="container bg-secondary">
-			<main></main>
-			</main>
-		</div>
+		<main class="container">
+			<p>Hoi</p>
+		</main>
 
-		<footer class="footer mt-auto pt-3 text-muted bg-dark">
+		<footer class="footer mt-auto p-3 text-muted bg-dark">
 			<div class="container">
 				&copy; 't Smikkelhoekje
 			</div>
