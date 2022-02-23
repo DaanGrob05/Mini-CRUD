@@ -81,9 +81,7 @@
 		</main>
 
 		<footer class="footer mt-auto p-3 text-muted bg-dark">
-			<div class="container">
-				&copy; 't Smikkelhoekje
-			</div>
+				<p>'t Smikkelhoekje </p>
     	</footer>
 
 		<!-- Bootstrap -->
