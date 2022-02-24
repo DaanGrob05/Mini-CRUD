@@ -31,10 +31,10 @@
 							<a href="menu.php" class="nav-link">Menu</a>
 						</li>
 						<li class="nav-item">
-							<a href="" class="nav-link">Contact</a>
+							<a href="contact.php" class="nav-link">Contact</a>
 						</li>
 						<li class="nav-item">
-							<a href="" class="nav-link">Login</a>
+							<a href="login.php" class="nav-link">Login</a>
 						</li>
 					</ul>
 					<form class="d-flex">

@@ -28,14 +28,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Menu
+                            <a class="nav-link" aria-current="page" href="">Menu
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="contact.php" class="nav-link">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a href="login.php" class="nav-link">Login</a>
+                            <a href="login.php" class="nav-link active">Login</a>
                         </li>
                     </ul>
                     <form class="d-flex">
