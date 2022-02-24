@@ -21,6 +21,7 @@
 	</head>
 
 	<body class="d-flex flex-column min-vh-100">
+		<!-- Header -->
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container-fluid">
@@ -50,14 +51,10 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="" class="nav-link">
-									Contact
-								</a>
+								<a href="" class="nav-link">Contact</a>
 							</li>
 							<li class="nav-item">
-								<a href="" class="nav-link">
-									Login
-								</a>
+								<a href="" class="nav-link">Login</a>
 							</li>
 						</ul>
 						<form class="d-flex">
@@ -75,11 +72,15 @@
 				</div>
 			</nav>
 		</header>
+		<!-- End Header -->
 
+		<!-- Main Content -->
 		<main class="container">
 			<p>Hoi</p>
 		</main>
+		<!-- End Main Content -->
 
+		<!-- Footer -->
 		<footer class="footer mt-auto p-3 text-muted bg-dark">
 				<p>'t Smikkelhoekje </p>
     	</footer>
