@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="">Menu
+                            <a class="nav-link" aria-current="page" href="menu.php">Menu
                             </a>
                         </li>
                         <li class="nav-item">
@@ -51,7 +51,19 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container"></main>
+    <main class="container">
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Gebruikersnaam</label>
+                <input type="text" class="form-control" name="username">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Wachtwoord</label>
+                <input type="text" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto p-3 text-muted bg-dark">

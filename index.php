@@ -51,8 +51,8 @@
 	<!-- End Header -->
 
 	<!-- Main Content -->
-	<main class="container">
-		<p>Hoi</p>
+	<main>
+		
 	</main>
 	<!-- End Main Content -->
 
