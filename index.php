@@ -28,7 +28,8 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a href="menu.php" class="nav-link">Menu</a>
+							<a href="menu.php" class="nav-link">Menu
+							</a>
 						</li>
 						<li class="nav-item">
 							<a href="contact.php" class="nav-link">Contact</a>
@@ -52,7 +53,7 @@
 
 	<!-- Main Content -->
 	<main>
-		
+
 	</main>
 	<!-- End Main Content -->
 
