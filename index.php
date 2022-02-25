@@ -38,9 +38,9 @@
 							<a href="login.php" class="nav-link">Login</a>
 						</li>
 					</ul>
-					<form class="d-flex">
+					<form action="menu.php" method="get" class="d-flex">
 						<input class="form-control me-2" type="search" placeholder="Dit werkt nog niet"
-							aria-label="Search" />
+							name="menuItem" />
 						<button class="btn btn-outline-success" type="submit">
 							Zoek
 						</button>
@@ -52,8 +52,8 @@
 	<!-- End Header -->
 
 	<!-- Main Content -->
-	<main>
-
+	<main class="hero-image h-100">
+		
 	</main>
 	<!-- End Main Content -->
 

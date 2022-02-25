@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <!-- Eigen CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <title>Menu</title>
+    <title>'t Smikkelhoekje</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -38,9 +38,9 @@
                             <a href="login.php" class="nav-link">Login</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <form action="menu.php" method="get" class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Dit werkt nog niet"
-                            aria-label="Search" />
+                            name="menuItem" />
                         <button class="btn btn-outline-success" type="submit">
                             Zoek
                         </button>

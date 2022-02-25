@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <!-- Eigen CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <title>Menu</title>
+    <title>'t Smikkelhoekje</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a href="menu.php" class="nav-link" >Menu
+                            <a href="menu.php" class="nav-link">Menu
                             </a>
                         </li>
                         <li class="nav-item">
@@ -38,9 +38,9 @@
                             <a href="login.php" class="nav-link active">Login</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <form action="menu.php" method="get" class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Dit werkt nog niet"
-                            aria-label="Search" />
+                            name="menuItem" />
                         <button class="btn btn-outline-success" type="submit">
                             Zoek
                         </button>
@@ -66,7 +66,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto p-2 text-muted bg-dark align-middle">
+    <footer class="footer mt-auto p-3 text-muted bg-dark align-middle">
         <p>'t Smikkelhoekje </p>
     </footer>
 
