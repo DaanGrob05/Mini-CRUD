@@ -7,7 +7,10 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Header -->
-    <?php include "../html/header.html" ?>
+    <?php
+        $activePage = "Login";
+        include "header.php" 
+    ?>
 
     <!-- Main Content -->
     <main class="container pt-3">
