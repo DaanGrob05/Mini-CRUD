@@ -13,27 +13,21 @@
                     <?php
                         $pages = array("Menu", "Contact", "Login");
 
+                        // De li tags worden hier gegenereerd
+                        // Huidige pagina krijgt een active class
                         foreach ($pages as $page) {
+                            $pageToLower = strtolower($page);
+
                             echo "<li class=\"nav-item\">";
                             if ($page == $activePage) {
-                                echo "<a href=\"$page.php\" class=\"nav-link active\">$page</a>";
+                                echo "<a href=\"$pageToLower.php\" class=\"nav-link active\">$page</a>";
                             } else {
-                                echo "<a href=\"$page.php\" class=\"nav-link\">$page</a>";
+                                echo "<a href=\"$pageToLower.php\" class=\"nav-link\">$page</a>";
                             }
                             echo "</li>";
                         }
                     ?>
 
-                    <!-- <li class="nav-item">
-                        <a href="menu.php" class="nav-link">Menu
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.php" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="login.php" class="nav-link">Login</a>
-                    </li> -->
                 </ul>
                 <form action="menu.php" method="get" class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Zoek een gerecht" name="menuItem" />
