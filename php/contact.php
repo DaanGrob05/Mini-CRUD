@@ -12,17 +12,15 @@
     <!-- Main Content -->
     <main class="container">
         <!--Section: Contact v.2-->
-        <section class="mb-4">
+        <!-- <section class="mb-4"> -->
 
             <!--Section heading-->
-            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
             <!--Section description-->
-            <p class="text-center w-responsive mx-auto mb-5">Als u vragen heeft kunt u gerust contact met ons opnemen met de onderstaande gegevens.</p>
+            <p class="text-center w-responsive mx-auto mb-5">Als u vragen heeft kunt u gerust contact met ons opnemen
+                met de onderstaande gegevens.</p>
 
             <div class="row">
-                <!--Grid column-->
-
-                <!--Grid column-->
                 <div class="text-center">
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
@@ -38,11 +36,9 @@
                         </li>
                     </ul>
                 </div>
-                <!--Grid column-->
-
             </div>
 
-        </section>
+        <!-- </section> -->
         <!--Section: Contact v.2-->
     </main>
 
