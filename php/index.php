@@ -13,8 +13,8 @@
     ?>
 
     <!-- Main Content -->
-    <main>
-        
+    <main class="bg-image">
+        <!-- <p>hoi</p> -->
     </main>
 
     <!-- Footer en Bootstrap Scripts -->

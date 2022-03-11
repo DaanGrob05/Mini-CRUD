@@ -17,3 +17,12 @@ main {
     background-size: cover;
     position: relative;
 }
+
+.bg-image {
+    background-image: url(https://www.pexels.com/photo/classic-hamburhttps://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260ger-and-french-fries-on-wooden-board-1556688);
+
+    /* image background moet overheen komen met text zwart en wit bijvoorbeeld */
+    background-repeat: no-repeat;
+
+    background-size: cover;
+}
