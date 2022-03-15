@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<?php include "../html/head.html" ?>
-</head>
+<?php include "head.php" ?>
 
 <body class="d-flex flex-column min-vh-100">
 	<!-- Header -->
     <?php
         $activePage = "";
-        include "header.php" 
+        include "header.php"
     ?>
 
     <!-- Main Content -->

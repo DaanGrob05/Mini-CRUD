@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <?php include "../html/head.html" ?>
-</head>
+<?php include "head.php" ?>
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Header -->
@@ -13,7 +8,7 @@
     ?>
 
     <!-- Main Content -->
-    <main class="container pt-3">
+    <main class="container pt-3 w-50">
         <form action="login.php" method="post">
             <div class="mb-3">
                 <label class="form-label">Gebruikersnaam</label>
