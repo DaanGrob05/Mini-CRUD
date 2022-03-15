@@ -2,7 +2,4 @@
 
 
     <!-- Main Content -->
-    <main>
-
-    </main>
 
