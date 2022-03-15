@@ -8,7 +8,7 @@
     ?>
 
     <!-- Main Content -->
-    <main class="bg-image">
+    <main>
         <!-- <p>hoi</p> -->
     </main>
 
