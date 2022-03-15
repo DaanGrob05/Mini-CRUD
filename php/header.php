@@ -1,7 +1,11 @@
+<?php include "head.php" ?>
+
+<body class="d-flex flex-column min-vh-100">
+
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">'t Smikkelhoekje</a>
+            <a class="navbar-brand" href="index.php?page=index">'t Smikkelhoekje</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -12,6 +16,7 @@
 
                     <?php
                         $pages = array("Menu", "Contact", "Login");
+                        $activePage = $_GET['page'];
 
                         // De li tags worden hier gegenereerd
                         // Huidige pagina krijgt een active class
@@ -20,9 +25,9 @@
 
                             echo "<li class=\"nav-item\">";
                             if ($page == $activePage) {
-                                echo "<a href=\"$pageToLower.php\" class=\"nav-link active\">$page</a>";
+                                echo "<a href=\"index.php?page=$pageToLower\" class=\"nav-link active\">$page</a>";
                             } else {
-                                echo "<a href=\"$pageToLower.php\" class=\"nav-link\">$page</a>";
+                                echo "<a href=\"index.php?page=$pageToLower\" class=\"nav-link\">$page</a>";
                             }
                             echo "</li>";
                         }
@@ -39,3 +44,5 @@
         </div>
     </nav>
 </header>
+
+<main>

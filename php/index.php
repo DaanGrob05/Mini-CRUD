@@ -1,19 +1,15 @@
-<?php include "head.php" ?>
+<!-- Header -->
+<?php
+    // $activePage = $_GET['page'];
+    include ('header.php');
+?>
 
-<body class="d-flex flex-column min-vh-100">
-	<!-- Header -->
-    <?php
-        $activePage = "";
-        include "header.php"
-    ?>
+<!-- Main Content -->
+<?php
+    if(isset($_POST['page'])){
+        include_once($_GET['page'].'.php');
+    }
+?>
 
-    <!-- Main Content -->
-    <main>
-        <!-- <p>hoi</p> -->
-    </main>
-
-    <!-- Footer en Bootstrap Scripts -->
-    <?php include "../html/footer.html" ?>
-</body>
-
-</html>
+<!-- Footer en Bootstrap Scripts -->
+<?php include ('../html/footer.html') ?>
