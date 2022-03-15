@@ -5,7 +5,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php?page=index">'t Smikkelhoekje</a>
+            <a class="navbar-brand" href="index.php?page=Index">'t Smikkelhoekje</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -31,6 +31,7 @@
                     ?>
 
                 </ul>
+
                 <form action="index.php" method="get" class="d-flex">
                     <input type="hidden" name="page" value="Menu">
                     <input class="form-control me-2" type="search" placeholder="Zoek een gerecht" name="menuItem" />
@@ -42,5 +43,3 @@
         </div>
     </nav>
 </header>
-
-<!-- <main> -->
