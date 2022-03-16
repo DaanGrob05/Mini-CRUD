@@ -5,7 +5,7 @@
     } else {
         $activePage = "Index";
     }
-    include ('header.php');
+    include_once ('header.php');
 ?>
 
 <!-- Main Content -->
@@ -21,4 +21,4 @@
 ?>
 
 <!-- Footer en Bootstrap Scripts -->
-<?php include ('footer.php') ?>
+<?php include_once ('footer.php') ?>
