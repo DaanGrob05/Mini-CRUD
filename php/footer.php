@@ -1,4 +1,3 @@
-
 <footer class="footer mt-auto p-3 text-muted bg-dark">
     <p>'t Smikkelhoekje </p>
 </footer>

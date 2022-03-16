@@ -2,11 +2,6 @@ body {
     background-color: #696969;
 }
 
-main {
-    min-height: 100%;
-    width: 100%;
-}
-
 .hero-image {
     background-image: url(../img/snackbar.jpg);
 

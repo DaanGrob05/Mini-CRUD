@@ -1,6 +1,10 @@
 <!-- Header -->
 <?php
-    $activePage = $_GET['page'];
+    if(isset($_GET['page']) && !empty($_GET['page'])){
+        $activePage = $_GET['page'];
+    } else {
+        $activePage = "Index";
+    }
     include ('header.php');
 ?>
 
