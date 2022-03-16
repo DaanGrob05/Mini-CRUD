@@ -1,7 +1,13 @@
 <?php
-    $sql = "SELECT * FROM album WHERE artiest =:artiest";
-    $stmt = $connect->prepare($sql);
-    $stmt->bindParam(":artiest", $_GET['menuItem']);
+    if(isset($_GET['menuItem']) && !empty($_GET['menuItem'])){
+        $sql = "SELECT * FROM album WHERE artiest LIKE CONCAT('%', :artiest, '%')";
+        $stmt = $connect->prepare($sql);
+        $stmt->bindParam(":artiest", $_GET['menuItem']);
+    } else {
+        $sql = "SELECT * FROM album";
+        $stmt = $connect->prepare($sql);
+    }
+
     $stmt->execute();
     $result = $stmt->fetchAll();
 
@@ -9,4 +15,3 @@
         echo $res['artiest'] . "<br>";
     }
 ?>
-
