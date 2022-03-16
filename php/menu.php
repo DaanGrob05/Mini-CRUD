@@ -10,8 +10,12 @@
 
     $stmt->execute();
     $result = $stmt->fetchAll();
-
-    foreach($result as $res){
-        echo $res['artiest'] . "<br>";
-    }
 ?>
+
+<div class="container-fluid mt-4">
+    <?php
+        foreach($result as $res){
+            echo $res['artiest'] . "<br>";
+        }
+    ?>
+</div>
