@@ -11,26 +11,15 @@
 <!-- Main Content -->
 <?php
     if(isset($_GET['page']) && !empty($_GET['page'])){
-        $pages = array("Menu", "Contact", "Login", "Index", "Create", "contactRedirect");
-
-        
-        
-        // Use condition to check the existence of URL
+        // Als pagina bestaat ga naar deze pagina
+        // Anders ga naar de 404 pagina
         $directToPage = $_GET['page'].'.php';
         if(file_exists($directToPage)) {
-            include_once($_GET['page'].'.php');
+            include_once($directToPage);
         }
         else {
             include_once('404.php');
         }
-
-        // echo $status;
-
-        // if(in_array($_GET['page'], $pages)){
-        //     include_once($_GET['page'].'.php');
-        // } else {
-        //     include_once('404.php');
-        // }
     } 
 ?>
 
