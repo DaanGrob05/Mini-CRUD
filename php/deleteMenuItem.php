@@ -6,15 +6,13 @@
     $result = $stmt->fetchAll();
 ?>
 
-<div class="container">
 
+<div class="container">
 <?php
     foreach ($result as $res) {
         echo $res['titel'] . "<br>";
         echo $res['artiest'] . "<br>";
         echo $res['genre'] . "<br>";
     }
-
 ?>
-
 </div>
