@@ -9,15 +9,10 @@
 <div class="container">
 
 <?php
-    // echo $_POST['menuItemID'];
-    // var_dump($result);
-
-    // $result = array_values($result);
     foreach ($result as $res) {
         echo $res['titel'] . "<br>";
         echo $res['artiest'] . "<br>";
         echo $res['genre'] . "<br>";
-
     }
 
 ?>
