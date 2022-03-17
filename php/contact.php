@@ -31,7 +31,18 @@
                 <label for="exampleFormControlTextarea1">Bericht</label>
                 <textarea class="form-control" rows="4" name="messageText"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mt-3">Log in</button>
+            <button type="submit" class="btn btn-primary mt-3" name="sendMessage" value="messageSent">Verstuur Bericht</button>
         </form>
     </div>
+
+    <?php
+    if(isset($_POST['sendMessage']) && !empty($_POST['sendMessage'])){
+        $sql = "INSERT INTO `bericht`(`klantNaam`, `berichtText`) VALUES (:klantNaam,:berichtText)";
+        $stmt = $connect->prepare($sql);
+        $stmt->bindParam(":klantNaam", $_POST['clientName']);
+        $stmt->bindParam(":berichtText", $_POST['messageText']);
+        $stmt->execute();
+    }
+        
+    ?>
 </div>
