@@ -23,15 +23,15 @@
 
     <div class="container pt-3 w-50">
         <form action="index.php?page=Contact" method="post">
-            <div class="mb-3">
+            <div class="form-group">
                 <label class="form-label">Naam</label>
                 <input type="text" class="form-control" name="clientName">
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label for="exampleFormControlTextarea1">Bericht</label>
                 <textarea class="form-control" rows="4" name="messageText"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Log in</button>
+            <button type="submit" class="btn btn-primary mt-3">Log in</button>
         </form>
     </div>
 </div>

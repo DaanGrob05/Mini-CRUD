@@ -49,7 +49,7 @@
 
                 </ul>
 
-                <form action="index.php" method="get" class="d-flex">
+                <form action="index.php" method="get" class="d-flex ">
                     <input type="hidden" name="page" value="Menu">
                     <input class="form-control me-2" type="search" placeholder="Zoek een gerecht" name="menuItem" />
                     <button class="btn btn-outline-success" type="submit">
