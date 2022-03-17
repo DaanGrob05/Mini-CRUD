@@ -1,6 +1,6 @@
 <!-- Main Content -->
 <div class="container pt-3 w-50">
-    <form action="login.php?page=Login" method="post">
+    <form action="index.php?page=Login" method="post">
         <div class="mb-3">
             <label class="form-label">Gebruikersnaam</label>
             <input type="text" class="form-control" name="username">
