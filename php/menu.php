@@ -20,7 +20,17 @@
 
     <?php
         foreach($result as $res){
-            echo $res['artiest'] . "<br>";
-        }
+            echo "<div class=\"container d-flex text-center\">";
+
+            echo $res['artiest'];
+
+            echo "<form method=\"post\" class=\"form-control-sm\" action=\"index.php?page=deleteMenuItem\">";
+
+            echo "<input type=\"hidden\" name=\"menuItemID\" class=\"\" value=\"" . $res['ID'] . "\">
+                <button type=\"submit\" class=\"btn btn-danger btn-sm\">Verwijder</button>
+                </form>";
+
+            echo "</div>";
+    }
     ?>
 </div>

@@ -31,7 +31,7 @@
                 <label for="exampleFormControlTextarea1">Bericht</label>
                 <textarea class="form-control" rows="4" name="messageText"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mt-3" name="sendMessage" value="messageSent">
+            <button type="submit" class="btn btn-primary mt-3">
                 Verstuur Bericht</button>
         </form>
     </div>
