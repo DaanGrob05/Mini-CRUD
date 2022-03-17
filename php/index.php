@@ -11,7 +11,7 @@
 <!-- Main Content -->
 <?php
     if(isset($_GET['page']) && !empty($_GET['page'])){
-        $pages = array("Menu", "Contact", "Login", "Index");
+        $pages = array("Menu", "Contact", "Login", "Index", "Create");
         if(in_array($_GET['page'], $pages)){
             include_once($_GET['page'].'.php');
         } else {
