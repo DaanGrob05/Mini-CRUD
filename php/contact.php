@@ -34,5 +34,12 @@
             <button type="submit" class="btn btn-primary mt-3">
                 Verstuur Bericht</button>
         </form>
+        <?php
+        session_start();
+        if (isset($_SESSION['messageSent'])){
+            echo "Bericht is verstuurd!";
+            session_destroy();
+        }
+        ?>
     </div>
 </div>

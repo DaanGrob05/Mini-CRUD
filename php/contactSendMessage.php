@@ -5,7 +5,10 @@
         $stmt->bindParam(":klantNaam", $_POST['clientName']);
         $stmt->bindParam(":berichtText", $_POST['messageText']);
         $stmt->execute();
+
+        session_start();
+        $_SESSION['messageSent'] = true;
     }
     
-    header ('Location: index.php?page=Contact');
+    header ("Location: index.php?page=Contact");
 ?>
