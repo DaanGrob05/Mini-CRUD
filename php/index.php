@@ -1,15 +1,13 @@
-<!-- Header -->
 <?php
+    // Connection, Head en Header
     if(isset($_GET['page']) && !empty($_GET['page'])){
         $activePage = $_GET['page'];
     } else {
         $activePage = "Index";
     }
     include_once ('header.php');
-?>
 
-<!-- Main Content -->
-<?php
+    // Main Content
     if(isset($_GET['page']) && !empty($_GET['page'])){
         // Als pagina bestaat ga naar deze pagina
         // Anders ga naar de 404 pagina
@@ -21,7 +19,7 @@
             include_once('404.php');
         }
     } 
-?>
 
-<!-- Footer en Bootstrap Scripts -->
-<?php include_once ('footer.php') ?>
+    // Footer en Scripts
+    include_once ('footer.php');
+?>
