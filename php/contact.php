@@ -23,7 +23,7 @@
     <!-- Bericht Form -->
     <div class="container pt-3 w-50">
         <h3 class="text-center">Stuur ons een direct bericht</h3>
-        <form action="index.php?page=contactSendMessage" method="post">
+        <form action="actions/actions.php?page=contactMessage" method="post">
             <div class="form-group">
                 <label class="form-label">Naam</label>
                 <input type="text" class="form-control" name="clientName">
