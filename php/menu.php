@@ -37,10 +37,10 @@
             echo $res['artiest'];
 
             // Aanpas knop
-            echo "<form method=\"post\" class=\"form-control-sm\" action=\"index.php?page=editMenuItem\">";
-            echo "<input type=\"hidden\" name=\"menuItemID\" class=\"\" value=\"" . $res['ID'] . "\">
-                <button type=\"submit\" class=\"btn btn-primary btn-sm\">Aanpassen</button>
-                </form>";
+            echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
+            echo "<input type='hidden' name='menuItemID' class='' value='" . $res['ID'] . "'>";
+            echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
+            echo "</form>";
 
             echo "</div>";
         }

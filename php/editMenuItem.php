@@ -15,14 +15,16 @@
         echo $res['genre'] . "<br>";
     }
 
-    echo "<form method=\"post\" class=\"form-control-sm\" action=\"index.php?page=Menu\">";
-    echo"<input type=\"hidden\" name=\"editMenuItem\" class=\"\" value=\"" . $_POST['menuItemID'] . "\">
-                <button type=\"submit\" class=\"btn btn-primary btn-sm\">Pas Aan</button>
-                </form>";
+    // Pas aan
+    echo "<form method='post' class='form-control-sm' action='index.php?page=Menu'>";
+    echo "<input type='hidden' name='editMenuItem' class='' value='" . $_POST['menuItemID'] . "'>";
+    echo "<button type='submit' class='btn btn-primary btn-sm'>Pas Aan</button>";
+    echo "</form>";
 
-    echo "<form method=\"post\" class=\"form-control-sm\" action=\"index.php?page=Menu\">";
-    echo"<input type=\"hidden\" name=\"deleteMenuItem\" class=\"\" value=\"" . $_POST['menuItemID'] . "\">
-                <button type=\"submit\" class=\"btn btn-danger btn-sm\">Verwijder</button>
-                </form>";
+    // Verwijder
+    echo "<form method='post' class='form-control-sm' action='index.php?page=Menu'>";
+    echo "<input type='hidden' name='deleteMenuItem' class='' value='" . $_POST['menuItemID'] . "'>";
+    echo "<button type='submit' class='btn btn-danger btn-sm'>Verwijder</button>";
+    echo "</form>";
 ?>
 </div>
