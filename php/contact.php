@@ -1,7 +1,6 @@
 <div class="container">
-    <!--Section heading-->
+    <!-- Informatie -->
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
-    <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-3">Als u vragen heeft kunt u gerust contact met ons opnemen
         met de onderstaande gegevens.</p>
 
@@ -21,7 +20,9 @@
         </ul>
     </div>
 
+    <!-- Bericht Form -->
     <div class="container pt-3 w-50">
+        <h3 class="text-center">Stuur ons een direct bericht</h3>
         <form action="index.php?page=contactSendMessage" method="post">
             <div class="form-group">
                 <label class="form-label">Naam</label>
@@ -34,6 +35,8 @@
             <button type="submit" class="btn btn-primary mt-3">
                 Verstuur Bericht</button>
         </form>
+
+        <!-- Laat zien dat bericht verstuurd is  -->
         <?php
         session_start();
         if (isset($_SESSION['messageSent'])){

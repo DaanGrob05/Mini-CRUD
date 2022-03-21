@@ -5,7 +5,7 @@
     } else {
         $activePage = "Index";
     }
-    include_once ('header.php');
+    include_once ('includes/header.php');
 
     // Main Content
     if(isset($_GET['page']) && !empty($_GET['page'])){
@@ -16,10 +16,10 @@
             include_once($directToPage);
         }
         else {
-            include_once('404.php');
+            include_once('includes/404.php');
         }
     } 
 
     // Footer en Scripts
-    include_once ('footer.php');
+    include_once ('includes/footer.php');
 ?>

@@ -49,6 +49,7 @@
 
                 </ul>
 
+                <!-- Zoek form -->
                 <form action="index.php" method="get" class="d-flex ">
                     <input type="hidden" name="page" value="Menu">
                     <input class="form-control me-2" type="search" placeholder="Zoek een gerecht" name="menuItem" />

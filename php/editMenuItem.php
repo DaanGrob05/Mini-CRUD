@@ -8,7 +8,7 @@
 
 
 <div class="container">
-<?php
+    <?php
     foreach ($result as $res) {
         echo $res['titel'] . "<br>";
         echo $res['artiest'] . "<br>";

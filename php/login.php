@@ -1,4 +1,3 @@
-<!-- Main Content -->
 <div class="container pt-3 w-50">
     <form action="index.php?page=Login" method="post">
         <div class="form-group">
