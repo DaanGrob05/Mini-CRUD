@@ -1,7 +1,7 @@
 <?php
     // Bepaal welke query word uitgevoerd op de gerechten
     if(isset($_GET['menuItem']) && !empty($_GET['menuItem'])){
-        $sql = "SELECT * FROM album WHERE artiest LIKE CONCAT('%', :artiest, '%')";
+    $sql = "SELECT * FROM album HERE artiest LIKE CONCAT('%', :artiest, '%')";
         $stmt = $connect->prepare($sql);
         $stmt->bindParam(":artiest", $_GET['menuItem']);
     } else {
@@ -16,13 +16,16 @@
 <div class="container">
     <!-- Laat een succes bericht zien als er een gerecht aangepast of verwijderd is -->
     <?php
-        if(isset($_POST['deleteMenuItem'])) {
+        session_start();
+        if(isset($_SESSION['menuItemDeleted'])) {
             echo "Gerecht is verwijderd <br>";
         }
 
         if(isset($_POST['editMenuItem'])) {
             echo "Gerecht is aangepast <br>";
         }
+
+        session_destroy();
     ?>
 
     <button type="button" class="btn btn-primary mt-2 mb-2"><a href="index.php?page=Create"

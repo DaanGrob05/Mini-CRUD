@@ -1,28 +1,11 @@
 <?php
-    $sql = "SELECT titel, artiest, genre FROM album WHERE ID = :ID";
-    $stmt = $connect->prepare($sql);
-    $stmt->bindParam(":ID", $_POST['menuItemID']);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-?>
+    if (isset($_POST['deleteMenuItem'])) {
+        $sql = "DELETE FROM `album` WHERE ID = :ID";
+        $stmt = $connect->prepare($sql);
+        $stmt->bindParam(":ID", $_POST['menuItemID']);
+        $stmt->execute();
 
-
-<div class="container">
-    <?php
-    foreach ($result as $res) {
-        echo $res['titel'] . "<br>";
-        echo $res['artiest'] . "<br>";
-        echo $res['genre'] . "<br>";
+        session_start();
+        $_SESSION['menuItemDeleted'] = true;
     }
-
-    echo "<form method=\"post\" class=\"form-control-sm\" action=\"../index.php?page=Menu\">";
-    echo"<input type=\"hidden\" name=\"editMenuItem\" class=\"\" value=\"" . $_POST['menuItemID'] . "\">
-                <button type=\"submit\" class=\"btn btn-primary btn-sm\">Pas Aan</button>
-                </form>";
-
-    echo "<form method=\"post\" class=\"form-control-sm\" action=\"index.php?page=Menu\">";
-    echo"<input type=\"hidden\" name=\"deleteMenuItem\" class=\"\" value=\"" . $_POST['menuItemID'] . "\">
-                <button type=\"submit\" class=\"btn btn-danger btn-sm\">Verwijder</button>
-                </form>";
 ?>
-</div>
