@@ -34,10 +34,31 @@
 
     <!-- Laat alle geselecteerde gerechten zien -->
     <?php
+            // TODO Tabel maken voor data
+            $gerecht = $result[0];
+            echo "<table class='table'>";
+                echo "<thead>";
+                    echo "<th scope='col'>Naam</th>";
+                    echo "<th scope='col'>Prijs</th>";
+                    echo "<th scope='col'></th>";
+                echo "</thead>";
+                echo "<tbody>";
+                    echo "<tr>";
+                        echo "<td>" . $gerecht['naam'] . "</td>";
+                        echo "<td>" . $gerecht['prijs'] . "</td>";
+                        echo "<td>";
+                            echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
+                            echo "<input type='hidden' name='menuItemID' class='' value='" . $gerecht['ID'] . "'>";
+                            echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
+                            echo "</form>";
+                        echo "</td>";
+                    echo "</tr>";
+                echo "</tbody>";
+            echo "</table>";
         foreach($result as $res){
             echo "<div class=\"d-flex text-center\">";
 
-            // TODO Tabel maken voor data
+
             echo $res['naam'];
 
             // Aanpas knop
