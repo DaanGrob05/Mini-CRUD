@@ -1,4 +1,5 @@
 <?php
+    // TODO Select statement werkend maken voor nieuwe DB
     $sql = "SELECT titel, artiest, genre FROM album WHERE ID = :ID";
     $stmt = $connect->prepare($sql);
     $stmt->bindParam(":ID", $_POST['menuItemID']);
@@ -17,6 +18,8 @@
             echo "<div class='form-group'>";
                 echo "<input type='hidden' class='form-control' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
             echo "</div>";
+
+            // TODO Naam en prijs input maken ipv huidige
 
             // Titel
             echo "<div class='form-group'>";

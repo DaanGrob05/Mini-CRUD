@@ -1,5 +1,6 @@
 <?php
     // Bepaal welke query word uitgevoerd op de gerechten
+    // TODO Queries aanpassen voor nieuwe DB
     if(isset($_GET['menuItem']) && !empty($_GET['menuItem'])){
     $sql = "SELECT * FROM album HERE artiest LIKE CONCAT('%', :artiest, '%')";
         $stmt = $connect->prepare($sql);
@@ -37,6 +38,7 @@
         foreach($result as $res){
             echo "<div class=\"d-flex text-center\">";
 
+            // TODO Tabel maken voor data
             echo $res['artiest'];
 
             // Aanpas knop
