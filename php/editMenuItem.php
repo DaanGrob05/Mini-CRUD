@@ -10,10 +10,7 @@
 <div class="container">
     <?php
         $res = $result[0];
-        // echo $res['artiest'] . "<br>";
-        // echo $res['genre'] . "<br>";
-
-        // TODO Aanpas functionaliteit
+        
         // Pas aan
         echo "<form method='post' action='redirects/redirect.php?page=menuItem' class='pt-3'>";
             // Item ID
