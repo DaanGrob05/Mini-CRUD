@@ -21,13 +21,13 @@
             // Naam
             echo "<div class='form-group'>";
                 echo "<label class='form-label'>Naam</label>";
-                echo "<input type='text' name='titel' value='" . $res['naam'] . "'></input>";
+                echo "<input type='text' name='itemName' value='" . $res['naam'] . "'></input>";
             echo "</div>";
             
             // Artiest
             echo "<div class='form-group'>";
                 echo "<label class='form-label'>Prijs</label>";
-                echo "<input type='number' step='0.01' name='artiest' value='" . $res['prijs'] . "'></input>";
+                echo "<input type='number' step='0.01' name='price' value='" . $res['prijs'] . "'></input>";
             echo "</div>";
 
             echo "<button type='submit' class='btn btn-primary' name='editMenuItem' value='true' >Pas Aan</button>";
