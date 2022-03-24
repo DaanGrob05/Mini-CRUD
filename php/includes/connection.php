@@ -1,4 +1,5 @@
 <?php
+// TODO Data veranderen voor nieuwe DB
 $host = 'localhost';
 $db = 'webshop';
 $user = 'root';

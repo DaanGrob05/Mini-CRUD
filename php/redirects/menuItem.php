@@ -1,5 +1,6 @@
 <?php
     if (isset($_POST['editMenuItem'])) {
+        // TODO Update statement veranderen
         $sql = "UPDATE `album` SET `titel`=:titel ,`artiest`=:artiest,`genre`=:genre WHERE ID = :ID";
         $stmt = $connect->prepare($sql);
         $stmt->bindParam(':titel', $_POST['titel']);
@@ -14,8 +15,9 @@
         
     }
 
-    
+
     if (isset($_POST['deleteMenuItem'])) {
+        // TODO Delete statement veranderen
         $sql = "DELETE FROM `album` WHERE ID = :ID";
         $stmt = $connect->prepare($sql);
         $stmt->bindParam(":ID", $_POST['menuItemID']);
