@@ -2,7 +2,6 @@
 include_once('../includes/connection.php');
 
 if(isset($_GET['page']) && !empty($_GET['page'])){
-    // TODO 404 Pagina implementeren of verwijderen
     // Als pagina bestaat ga naar deze pagina
     // Anders ga naar de 404 pagina
     $directToPage = $_GET['page'].'.php';
@@ -10,7 +9,7 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
         include_once($directToPage);
     }
     else {
-        include_once('includes/404.php');
+        include_once('../includes/404.php');
     }
 } 
 ?>
