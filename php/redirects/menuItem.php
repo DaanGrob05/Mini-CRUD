@@ -8,4 +8,10 @@
         session_start();
         $_SESSION['menuItemDeleted'] = true;
     }
+
+
+    if (isset($_POST['editMenuItem'])) {
+        session_start();
+        $_SESSION['menuItemEdited'] = true;
+    }
 ?>

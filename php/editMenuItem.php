@@ -9,23 +9,32 @@
 
 <div class="container">
     <?php
-        foreach ($result as $res) {
-            echo $res['titel'] . "<br>";
-            echo $res['artiest'] . "<br>";
-            echo $res['genre'] . "<br>";
-        }
+        $res = $result[0];
+        echo $res['artiest'] . "<br>";
+        echo $res['genre'] . "<br>";
 
         // TODO Aanpas functionaliteit
         // Pas aan
-        echo "<form method='post' class='form-control-sm' action='redirects/redirect.php?page=menuItem'>";
-        echo "<input type='hidden' name='editMenuItem' value='" . $_POST['menuItemID'] . "'>";
-        echo "<button type='submit' class='btn btn-primary btn-sm' name='editMenuItem' value='true' >Pas Aan</button>";
-        echo "</form>";
+        echo "<div class='container pt-3'>";
+            echo "<form method='post' action='redirects/redirect.php?page=menuItem'>";
+                echo "<div class='form-group'>";
+                    echo "<input type='hidden' class='form-control' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
+                echo "</div>";
+
+                echo "<div class='form-group'>";
+                    echo "<label class='form-label'>Naam</label>";
+                    echo "<input type='text' name='itemName' value='" . $res['titel'] . "'></input>";
+                echo "</div>";
+
+                echo "<button type='submit' class='btn btn-primary btn-sm' name='editMenuItem' value='true' >Pas Aan</button>";
+            echo "</form>";
+        echo "</div>";
+
 
         // Verwijder
         echo "<form method='post' class='form-control-sm' action='redirects/redirect.php?page=menuItem'>";
-        echo "<input type='hidden' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
-        echo "<button type='submit' class='btn btn-danger btn-sm' name='deleteMenuItem' value='true'>Verwijder</button>";
+            echo "<input type='hidden' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
+            echo "<button type='submit' class='btn btn-danger btn-sm' name='deleteMenuItem' value='true'>Verwijder</button>";
         echo "</form>";
     ?>
 </div>
