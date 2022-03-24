@@ -18,24 +18,16 @@
                 echo "<input type='hidden' class='form-control' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
             echo "</div>";
 
-            // TODO Naam en prijs input maken ipv huidige
-
-            // Titel
+            // Naam
             echo "<div class='form-group'>";
                 echo "<label class='form-label'>Naam</label>";
-                echo "<input type='text' name='titel' value='" . $res['titel'] . "'></input>";
+                echo "<input type='text' name='titel' value='" . $res['naam'] . "'></input>";
             echo "</div>";
             
             // Artiest
             echo "<div class='form-group'>";
-                echo "<label class='form-label'>Artiest</label>";
-                echo "<input type='text' name='artiest' value='" . $res['artiest'] . "'></input>";
-            echo "</div>";
-
-            // Genre
-            echo "<div class='form-group'>";
-                echo "<label class='form-label'>Genre</label>";
-                echo "<input type='text' name='genre' value='" . $res['genre'] . "'></input>";
+                echo "<label class='form-label'>Prijs</label>";
+                echo "<input type='number' step='0.01' name='artiest' value='" . $res['prijs'] . "'></input>";
             echo "</div>";
 
             echo "<button type='submit' class='btn btn-primary' name='editMenuItem' value='true' >Pas Aan</button>";
