@@ -1,7 +1,7 @@
 <?php
 // TODO Data veranderen voor nieuwe DB
 $host = 'localhost';
-$db = 'webshop';
+$db = 'minicrud';
 $user = 'root';
 $pass = "";
 $charset = 'utf8mb4';

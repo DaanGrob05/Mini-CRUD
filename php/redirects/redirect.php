@@ -10,7 +10,7 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
         include_once($directToPage);
     }
     else {
-        include_once('includes/404.php');
+        include_once('../includes/404.php');
     }
 } 
 ?>

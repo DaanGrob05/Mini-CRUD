@@ -1,12 +1,11 @@
 <?php
     // Bepaal welke query word uitgevoerd op de gerechten
-    // TODO Queries aanpassen voor nieuwe DB
     if(isset($_GET['menuItem']) && !empty($_GET['menuItem'])){
-    $sql = "SELECT * FROM album HERE artiest LIKE CONCAT('%', :artiest, '%')";
+    $sql = "SELECT * FROM gerecht WHERE naam LIKE CONCAT('%', :naam, '%')";
         $stmt = $connect->prepare($sql);
-        $stmt->bindParam(":artiest", $_GET['menuItem']);
+        $stmt->bindParam(":naam", $_GET['menuItem']);
     } else {
-        $sql = "SELECT * FROM album";
+        $sql = "SELECT * FROM gerecht";
         $stmt = $connect->prepare($sql);
     }
 
@@ -29,25 +28,35 @@
         session_destroy();
     ?>
 
+    <!-- Voeg nieuw gerecht toe -->
     <button type="button" class="btn btn-primary mt-2 mb-2"><a href="index.php?page=Create"
-            class="text-light text-decoration-none">Maak nieuw item aan</a></button>
+            class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
     <br>
 
-    <!-- Laat alle geselecteerde gerechten zien -->
     <?php
-        foreach($result as $res){
-            echo "<div class=\"d-flex text-center\">";
-
-            // TODO Tabel maken voor data
-            echo $res['artiest'];
-
-            // Aanpas knop
-            echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
-            echo "<input type='hidden' name='menuItemID' class='' value='" . $res['ID'] . "'>";
-            echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
-            echo "</form>";
-
-            echo "</div>";
-        }
+        $gerecht = $result[0];
+        echo "<table class='table table-sm table-hover table-striped w-75'>";
+            echo "<thead>";
+                echo "<th scope='col'>Naam</th>";
+                echo "<th scope='col'>Prijs</th>";
+                echo "<th scope='col'></th>";
+            echo "</thead>";
+            echo "<tbody>";
+            // Voor elk gerecht word een row gemaakt
+            foreach ($result as $res) {
+                echo "<tr>";
+                    echo "<td>" . $res['naam'] . "</td>";
+                    echo "<td>" . $res['prijs'] . "</td>";
+                    echo "<td>";
+                        // Aanpas knop
+                        echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
+                        echo "<input type='hidden' name='menuItemID' class='' value='" . $res['ID'] . "'>";
+                        echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
+                        echo "</form>";
+                    echo "</td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+        echo "</table>";
     ?>
 </div>
