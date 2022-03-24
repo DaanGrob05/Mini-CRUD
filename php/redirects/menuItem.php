@@ -1,4 +1,17 @@
 <?php
+    if (isset($_POST['createMenuItem'])) {
+        $sql = "INSERT INTO `gerecht`(`naam`, `prijs`) VALUES (:naam, :prijs)";
+        $stmt = $connect->prepare($sql);
+        $stmt->bindParam(':naam', $_POST['itemName']);
+        $stmt->bindParam(':prijs', $_POST['price']);
+        $stmt->execute();
+        
+        session_start();
+        $_SESSION['menuItemCreated'] = true;
+        header ("Location: ../index.php?page=Menu");
+    }
+
+
     if (isset($_POST['editMenuItem'])) {
         $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
         $stmt = $connect->prepare($sql);
