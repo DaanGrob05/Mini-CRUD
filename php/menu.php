@@ -35,7 +35,7 @@
 
     <?php
         $gerecht = $result[0];
-        echo "<table class='table table-striped w-75'>";
+        echo "<table class='table table-sm table-hover table-striped w-75'>";
             echo "<thead>";
                 echo "<th scope='col'>Naam</th>";
                 echo "<th scope='col'>Prijs</th>";

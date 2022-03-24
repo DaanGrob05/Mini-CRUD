@@ -28,7 +28,6 @@
         session_start();
         $_SESSION['menuItemEdited'] = true;
         header ("Location: ../index.php?page=Menu");
-        
     }
 
 
