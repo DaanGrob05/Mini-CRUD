@@ -28,46 +28,37 @@
         session_destroy();
     ?>
 
+    <!-- Voeg nieuw gerecht toe -->
     <button type="button" class="btn btn-primary mt-2 mb-2"><a href="index.php?page=Create"
-            class="text-light text-decoration-none">Maak nieuw item aan</a></button>
+            class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
     <br>
 
     <!-- Laat alle geselecteerde gerechten zien -->
     <?php
-            // TODO Tabel maken voor data
-            $gerecht = $result[0];
-            echo "<table class='table'>";
-                echo "<thead>";
-                    echo "<th scope='col'>Naam</th>";
-                    echo "<th scope='col'>Prijs</th>";
-                    echo "<th scope='col'></th>";
-                echo "</thead>";
-                echo "<tbody>";
-                    echo "<tr>";
-                        echo "<td>" . $gerecht['naam'] . "</td>";
-                        echo "<td>" . $gerecht['prijs'] . "</td>";
-                        echo "<td>";
-                            echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
-                            echo "<input type='hidden' name='menuItemID' class='' value='" . $gerecht['ID'] . "'>";
-                            echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
-                            echo "</form>";
-                        echo "</td>";
-                    echo "</tr>";
-                echo "</tbody>";
-            echo "</table>";
-        foreach($result as $res){
-            echo "<div class=\"d-flex text-center\">";
-
-
-            echo $res['naam'];
-
-            // Aanpas knop
-            echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
-            echo "<input type='hidden' name='menuItemID' class='' value='" . $res['ID'] . "'>";
-            echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
-            echo "</form>";
-
-            echo "</div>";
-        }
+        // TODO Tabel maken voor data
+        $gerecht = $result[0];
+        echo "<table class='table table-striped w-75'>";
+            echo "<thead>";
+                echo "<th scope='col'>Naam</th>";
+                echo "<th scope='col'>Prijs</th>";
+                echo "<th scope='col'></th>";
+            echo "</thead>";
+            echo "<tbody>";
+            // Voor elk gerecht word een row gemaakt
+            foreach ($result as $res) {
+                echo "<tr>";
+                    echo "<td>" . $res['naam'] . "</td>";
+                    echo "<td>" . $res['prijs'] . "</td>";
+                    echo "<td>";
+                        // Aanpas knop
+                        echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
+                        echo "<input type='hidden' name='menuItemID' class='' value='" . $res['ID'] . "'>";
+                        echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
+                        echo "</form>";
+                    echo "</td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+        echo "</table>";
     ?>
 </div>

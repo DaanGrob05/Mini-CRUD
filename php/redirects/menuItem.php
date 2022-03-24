@@ -1,4 +1,8 @@
 <?php
+    // TODO Categorie toevoegen aan gerechten tabel
+    // TODO Group by Categorie
+
+    // Gerecht toevoegen
     if (isset($_POST['createMenuItem'])) {
         $sql = "INSERT INTO `gerecht`(`naam`, `prijs`) VALUES (:naam, :prijs)";
         $stmt = $connect->prepare($sql);
@@ -12,6 +16,7 @@
     }
 
 
+    // Gerecht aanpassen
     if (isset($_POST['editMenuItem'])) {
         $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
         $stmt = $connect->prepare($sql);
@@ -27,6 +32,7 @@
     }
 
 
+    // Gerecht verwijderen
     if (isset($_POST['deleteMenuItem'])) {
         $sql = "DELETE FROM `gerecht` WHERE ID = :ID";
         $stmt = $connect->prepare($sql);
