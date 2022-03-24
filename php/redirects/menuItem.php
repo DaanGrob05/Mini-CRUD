@@ -18,7 +18,7 @@
 
     if (isset($_POST['deleteMenuItem'])) {
         // TODO Delete statement veranderen
-        $sql = "DELETE FROM `album` WHERE ID = :ID";
+        $sql = "DELETE FROM `gerecht` WHERE ID = :ID";
         $stmt = $connect->prepare($sql);
         $stmt->bindParam(":ID", $_POST['menuItemID']);
         $stmt->execute();

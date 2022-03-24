@@ -1,6 +1,5 @@
 <?php
-    // TODO Select statement werkend maken voor nieuwe DB
-    $sql = "SELECT titel, artiest, genre FROM album WHERE ID = :ID";
+    $sql = "SELECT naam, prijs FROM gerecht WHERE ID = :ID";
     $stmt = $connect->prepare($sql);
     $stmt->bindParam(":ID", $_POST['menuItemID']);
     $stmt->execute();
