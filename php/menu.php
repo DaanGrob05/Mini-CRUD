@@ -33,9 +33,7 @@
             class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
     <br>
 
-    <!-- Laat alle geselecteerde gerechten zien -->
     <?php
-        // TODO Tabel maken voor data
         $gerecht = $result[0];
         echo "<table class='table table-striped w-75'>";
             echo "<thead>";
