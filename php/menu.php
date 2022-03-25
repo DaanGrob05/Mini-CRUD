@@ -27,12 +27,17 @@
             }
         }
 
-        if(isset($_SESSION['menuItemDeleted'])) {
-            echo "Gerecht is verwijderd <br>";
+        // Succes of error message weergeven van gerecht aanpassen
+        if (isset($_SESSION['menuItemEdited'])) {
+            if ($_SESSION['menuItemEdited'] == true) {
+                echo "Gerecht is aangepast <br>";
+            } else {
+                echo "Er is een fout opgetreden bij het aanpassen van gerecht <br>";
+            }
         }
 
-        if(isset($_POST['editMenuItem'])) {
-            echo "Gerecht is aangepast <br>";
+        if(isset($_SESSION['menuItemDeleted'])) {
+            echo "Gerecht is verwijderd <br>";
         }
 
         session_destroy();

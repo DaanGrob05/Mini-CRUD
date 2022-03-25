@@ -22,17 +22,21 @@
 
 
     // Gerecht aanpassen
-    // TODO Empty check
     if (isset($_POST['editMenuItem'])) {
-        $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
-        $stmt = $connect->prepare($sql);
-        $stmt->bindParam(':naam', $_POST['itemName']);
-        $stmt->bindParam(':prijs', $_POST['price']);
-        $stmt->bindParam(":ID", $_POST['menuItemID']);
-        $stmt->execute();
-        
         session_start();
-        $_SESSION['menuItemEdited'] = true;
+
+        if (!empty($_POST['itemName']) && !empty($_POST['price']) && !empty($_POST['menuItemID'])) {
+            $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
+            $stmt = $connect->prepare($sql);
+            $stmt->bindParam(':naam', $_POST['itemName']);
+            $stmt->bindParam(':prijs', $_POST['price']);
+            $stmt->bindParam(":ID", $_POST['menuItemID']);
+            $stmt->execute();
+            
+            $_SESSION['menuItemEdited'] = true;
+        } else {
+            $_SESSION['menuItemEdited'] = false;
+        }
         header ("Location: ../index.php?page=Menu");
     }
 
