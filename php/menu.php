@@ -17,6 +17,16 @@
     <!-- Laat een succes bericht zien als er een gerecht aangepast of verwijderd is -->
     <?php
         session_start();
+
+        // Succes of error message weergeven van gerecht toevoegen
+        if (isset($_SESSION['menuItemCreated'])) {
+            if ($_SESSION['menuItemCreated'] == true) {
+                echo "Gerecht is toegevoegd <br>";
+            } else {
+                echo "Er is een fout opgetreden bij het toevoegen van gerecht <br>";
+            }
+        }
+
         if(isset($_SESSION['menuItemDeleted'])) {
             echo "Gerecht is verwijderd <br>";
         }

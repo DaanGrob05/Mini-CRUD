@@ -1,7 +1,7 @@
 <!-- Main Content -->
 <!-- TODO Create werkend maken -->
 <div class="container pt-3 w-50">
-    <form name="create" action="redirects/redirect.php?page=menuItem" method="post">
+    <form name="createMenuItem" id="createMenuItem" action="redirects/redirect.php?page=menuItem" method="post">
         <div class="form-group">
             <label class="form-label">Gerecht Naam</label>
             <input type="text" class="form-control" name="itemName">
