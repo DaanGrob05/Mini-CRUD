@@ -17,12 +17,27 @@
     <!-- Laat een succes bericht zien als er een gerecht aangepast of verwijderd is -->
     <?php
         session_start();
-        if(isset($_SESSION['menuItemDeleted'])) {
-            echo "Gerecht is verwijderd <br>";
+
+        // Succes of error message weergeven van gerecht toevoegen
+        if (isset($_SESSION['menuItemCreated'])) {
+            if ($_SESSION['menuItemCreated'] == true) {
+                echo "Gerecht is toegevoegd <br>";
+            } else {
+                echo "Er is een fout opgetreden bij het toevoegen van gerecht <br>";
+            }
         }
 
-        if(isset($_POST['editMenuItem'])) {
-            echo "Gerecht is aangepast <br>";
+        // Succes of error message weergeven van gerecht aanpassen
+        if (isset($_SESSION['menuItemEdited'])) {
+            if ($_SESSION['menuItemEdited'] == true) {
+                echo "Gerecht is aangepast <br>";
+            } else {
+                echo "Er is een fout opgetreden bij het aanpassen van gerecht <br>";
+            }
+        }
+
+        if(isset($_SESSION['menuItemDeleted'])) {
+            echo "Gerecht is verwijderd <br>";
         }
 
         session_destroy();
