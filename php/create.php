@@ -4,12 +4,12 @@
     <form name="createMenuItem" id="createMenuItem" action="redirects/redirect.php?page=menuItem" method="post">
         <div class="form-group">
             <label class="form-label">Gerecht Naam</label>
-            <input type="text" class="form-control" name="itemName">
+            <input type="text" class="form-control" id="itemName" name="itemName">
         </div>
         <div class="form-group mt-3">
             <label class="form-label">Prijs</label>
-            <input type="number" step="0.01" class="form-control" name="price">
+            <input type="number" step="0.01" class="form-control" id="price" name="price">
         </div>
-        <button type="submit" name="createMenuItem" class="btn btn-primary mt-3">Voeg toe</button>
+        <button type="submit" name="createMenuItem" class="btn btn-primary mt-3" id="createButton">Voeg toe</button>
     </form>
 </div>

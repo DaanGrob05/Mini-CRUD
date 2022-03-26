@@ -1,6 +1,7 @@
 <?php
     // TODO Categorie toevoegen aan gerechten tabel
     // TODO Group by Categorie
+    var_dump($_POST);
 
     // Gerecht toevoegen
     if (isset($_POST['createMenuItem'])) {

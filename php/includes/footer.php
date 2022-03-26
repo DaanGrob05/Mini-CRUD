@@ -8,8 +8,7 @@
 </script>
 
 <!-- TODO Toastr werkend maken -->
-<script src="../../js/toast.js"></script>
-<script src="../../js"></script>
+<script src="../js/validations.js"></script>
 
 </body>
 

@@ -17,6 +17,10 @@
             echo "<div class='form-group'>";
                 echo "<input type='hidden' class='form-control' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
             echo "</div>";
+            
+            echo "<div class='form-group'>";
+                echo "<input type='hidden' class='form-control' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
+            echo "</div>";
 
             // Naam
             echo "<div class='form-group'>";
@@ -24,7 +28,7 @@
                 echo "<input type='text' name='itemName' value='" . $res['naam'] . "'></input>";
             echo "</div>";
             
-            // Artiest
+            // Prijs
             echo "<div class='form-group'>";
                 echo "<label class='form-label'>Prijs</label>";
                 echo "<input type='number' step='0.01' name='price' value='" . $res['prijs'] . "'></input>";

@@ -1,19 +1,26 @@
 // TODO Create
-const createForm = document.querySelector("#createMenuItem");
+// const createForm = document.querySelector("#createMenuItem");
 
-createForm.addEventListener("submit", (e) => {
-	e.preventDefault();
-	// Inputs ophalen .value
-	const itemNameField = document.querySelector("itemName").value;
-	const priceField = document.querySelector("price").value;
-	// Als 1 leeg is preventDefault
-	// Anders return false;
-	if (itemNameField == "" || priceField == "") {
-		console.log("x");
-	} else {
-		return false;
-	}
-});
+// createForm.addEventListener("submit", (e) => {
+// 	e.preventDefault();
+
+// 	if (validate() == false) {
+// 		console.log("e");
+// 		return true;
+// 	}
+// });
+
+// const validate = () => {
+// 	const itemNameField = document.querySelector("#itemName").value;
+// 	const priceField = document.querySelector("#price").value;
+
+// 	if (itemNameField == "" || priceField == "") {
+// 		console.log("x");
+// 	} else {
+// 		// createForm.submit();
+// 		return false;
+// 	}
+// };
 
 // TODO Aanpassen
 
