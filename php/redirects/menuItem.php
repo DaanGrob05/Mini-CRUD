@@ -1,22 +1,19 @@
 <?php
     // TODO Categorie toevoegen aan gerechten tabel
     // TODO Group by Categorie
-    var_dump($_POST);
-
+   
     // Gerecht toevoegen
     if (isset($_POST['createMenuItem'])) {
-        session_start();
-
         if (!empty($_POST['itemName']) && !empty($_POST['price'])) {
             $sql = "INSERT INTO `gerecht`(`naam`, `prijs`) VALUES (:naam, :prijs)";
             $stmt = $connect->prepare($sql);
             $stmt->bindParam(':naam', $_POST['itemName']);
             $stmt->bindParam(':prijs', $_POST['price']);
             $stmt->execute();
-            
-            $_SESSION['menuItemCreated'] = true;
+
+            setcookie("menuItemCreated", true, time() + 5, "/");
         } else {
-            $_SESSION['menuItemCreated'] = false;
+            setcookie("menuItemCreated", false, time() + 5, "/");
         }
         header ("Location: ../index.php?page=Menu");
     }
