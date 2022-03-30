@@ -38,10 +38,12 @@
 
         <!-- Laat zien dat bericht verstuurd is  -->
         <?php
-        session_start();
-        if (isset($_SESSION['messageSent'])){
-            echo "Bericht is verstuurd!";
-            session_destroy();
+        if (isset($_COOKIE['messageSent'])){
+            if ($_COOKIE['messageSent']) {
+                echo "Bericht is verstuurd!";
+            } else {
+                echo "Er is iets verkeerd gegaan, probeer uw bericht opnieuw te verzenden.";
+            }
         }
         ?>
     </div>

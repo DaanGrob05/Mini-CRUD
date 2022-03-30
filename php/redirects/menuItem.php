@@ -1,6 +1,7 @@
 <?php
     // TODO Categorie toevoegen aan gerechten tabel
     // TODO Group by Categorie
+    $cookieTimer = 3;
    
     // Gerecht toevoegen
     if (isset($_POST['createMenuItem'])) {
@@ -11,9 +12,9 @@
             $stmt->bindParam(':prijs', $_POST['price']);
             $stmt->execute();
 
-            setcookie("menuItemCreated", true, time() + 5, "/");
+            setcookie("menuItemCreated", true, time() + $cookieTimer, "/");
         } else {
-            setcookie("menuItemCreated", false, time() + 5, "/");
+            setcookie("menuItemCreated", false, time() + $cookieTimer, "/");
         }
         header ("Location: ../index.php?page=Menu");
     }
@@ -29,9 +30,9 @@
             $stmt->bindParam(":ID", $_POST['menuItemID']);
             $stmt->execute();
             
-            setcookie("menuItemEdited", true, time() + 5, "/");
+            setcookie("menuItemEdited", true, time() + $cookieTimer, "/");
         } else {
-            setcookie("menuItemEdited", false, time() + 5, "/");
+            setcookie("menuItemEdited", false, time() + $cookieTimer, "/");
         }
         header ("Location: ../index.php?page=Menu");
     }
@@ -43,7 +44,7 @@
         $stmt->bindParam(":ID", $_POST['menuItemID']);
         $stmt->execute();
 
-        setcookie("menuItemDeleted", true, time() + 5, "/");
+        setcookie("menuItemDeleted", true, time() + $cookieTimer, "/");
 
         header ("Location: ../index.php?page=Menu");
     }

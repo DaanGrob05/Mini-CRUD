@@ -18,7 +18,7 @@
     <?php
         // Succes of error message weergeven van gerecht toevoegen
         if (isset($_COOKIE['menuItemCreated'])) {
-            if ($_COOKIE['menuItemCreated'] == true) {
+            if ($_COOKIE['menuItemCreated']) {
                 echo "Gerecht is toegevoegd <br>";
             } else {
                 echo "Er is een fout opgetreden bij het toevoegen van gerecht <br>";
@@ -27,7 +27,7 @@
 
         // Succes of error message weergeven van gerecht aanpassen
         if (isset($_COOKIE['menuItemEdited'])) {
-            if ($_COOKIE['menuItemEdited'] == true) {
+            if ($_COOKIE['menuItemEdited']) {
                 echo "Gerecht is aangepast <br>";
             } else {
                 echo "Er is een fout opgetreden bij het aanpassen van gerecht <br>";
