@@ -26,15 +26,15 @@
         }
 
         // Succes of error message weergeven van gerecht aanpassen
-        if (isset($_SESSION['menuItemEdited'])) {
-            if ($_SESSION['menuItemEdited'] == true) {
+        if (isset($_COOKIE['menuItemEdited'])) {
+            if ($_COOKIE['menuItemEdited'] == true) {
                 echo "Gerecht is aangepast <br>";
             } else {
                 echo "Er is een fout opgetreden bij het aanpassen van gerecht <br>";
             }
         }
 
-        if(isset($_SESSION['menuItemDeleted'])) {
+        if(isset($_COOKIE['menuItemDeleted'])) {
             echo "Gerecht is verwijderd <br>";
         }
 

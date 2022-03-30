@@ -18,10 +18,8 @@
         header ("Location: ../index.php?page=Menu");
     }
 
-
     // Gerecht aanpassen
     if (isset($_POST['editMenuItem'])) {
-        session_start();
 
         if (!empty($_POST['itemName']) && !empty($_POST['price']) && !empty($_POST['menuItemID'])) {
             $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
@@ -31,13 +29,12 @@
             $stmt->bindParam(":ID", $_POST['menuItemID']);
             $stmt->execute();
             
-            $_SESSION['menuItemEdited'] = true;
+            setcookie("menuItemEdited", true, time() + 5, "/");
         } else {
-            $_SESSION['menuItemEdited'] = false;
+            setcookie("menuItemEdited", false, time() + 5, "/");
         }
         header ("Location: ../index.php?page=Menu");
     }
-
 
     // Gerecht verwijderen
     if (isset($_POST['deleteMenuItem'])) {
@@ -46,8 +43,8 @@
         $stmt->bindParam(":ID", $_POST['menuItemID']);
         $stmt->execute();
 
-        session_start();
-        $_SESSION['menuItemDeleted'] = true;
+        setcookie("menuItemDeleted", true, time() + 5, "/");
+
         header ("Location: ../index.php?page=Menu");
     }
 ?>
