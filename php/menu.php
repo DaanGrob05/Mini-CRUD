@@ -34,11 +34,10 @@
             }
         }
 
+        // Succes message voor verwijderen
         if(isset($_COOKIE['menuItemDeleted'])) {
             echo "Gerecht is verwijderd <br>";
         }
-
-        // session_destroy();
     ?>
 
     <!-- Voeg nieuw gerecht toe -->
@@ -46,6 +45,7 @@
             class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
     <br>
 
+    <!-- Tabel voor alle gerechten -->
     <?php
         $gerecht = $result[0];
         echo "<table class='table table-sm table-hover table-striped w-75'>";
