@@ -29,7 +29,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-lg-0">
                         <?php
 
                         // Login of Admin op basis van isAdmin cookie
@@ -55,7 +55,7 @@
                     </ul>
 
                     <!-- Zoek form -->
-                    <form action="index.php" method="get" class="d-flex ">
+                    <form action="index.php" method="get" class="d-flex mb-0">
                         <input type="hidden" name="page" value="Menu">
                         <input class="form-control me-2" type="search" placeholder="Zoek een gerecht" name="menuItem" />
                         <button class="btn btn-outline-success" type="submit">
