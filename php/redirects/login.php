@@ -7,10 +7,10 @@
     $result = $stmt->fetchAll();
 
     if(count($result) > 0){
-        setcookie("isAdmin", true, time() + 60000, "/");
+        setcookie("isAdmin", "1", time() + 60000, "/");
         header("Location: ../index.php?page=Admin");
     } else {
-        setcookie("isAdmin", false, time() + 60000, "/");
+        setcookie("isAdmin", "0", time() + 60000, "/");
         header("Location: ../index.php?page=Login");
     }
 ?>

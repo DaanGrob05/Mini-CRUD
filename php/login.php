@@ -1,3 +1,7 @@
+<?php
+    // TODO isAdmin check
+?>
+
 <div class="container pt-3 w-50">
     <form action="redirects/redirect.php?page=login" method="post">
         <div class="form-group">
