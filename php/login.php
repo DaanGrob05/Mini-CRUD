@@ -1,5 +1,5 @@
 <div class="container pt-3 w-50">
-    <form action="index.php?page=Login" method="post">
+    <form action="redirects/redirect.php?page=login" method="post">
         <div class="form-group">
             <label class="form-label">Gebruikersnaam</label>
             <input type="text" class="form-control" name="username" value="">
