@@ -1,4 +1,5 @@
 <?php
+    // Login
     if (isset($_POST['login'])) {
         $sql = "SELECT * FROM admin WHERE username = :username AND password = :password";
         $stmt = $connect->prepare($sql);
@@ -16,6 +17,7 @@
         }
     }
 
+    // Logout
     if (isset($_POST['logout'])) {
         setcookie("isAdmin", "0", time() + 60000, "/");
         header("Location: ../index.php?page=Login");
