@@ -43,8 +43,6 @@
                             $loginOrAdmin = "Login";
                         }
 
-                         
-
                         $pages = array("Menu", "Contact", $loginOrAdmin);
                         // De li tags worden hier gegenereerd
                         // Huidige pagina krijgt een active class
