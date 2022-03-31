@@ -7,6 +7,10 @@
     }
 ?>
 
+
+<div class="container w-100 mt-2 text-center">
+<h3>Als je admin rechten hebt kun je hier inloggen</h3>
+</div>
 <div class="container pt-3 w-50">
     <form action="redirects/redirect.php?page=login" method="post">
         <div class="form-group">
