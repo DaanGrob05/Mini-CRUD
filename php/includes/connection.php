@@ -2,7 +2,7 @@
 session_start();
 
 $host = 'localhost';
-$db = 'minicrud';
+$db = 'mincrud';
 $user = 'root';
 $pass = "";
 $charset = 'utf8mb4';
