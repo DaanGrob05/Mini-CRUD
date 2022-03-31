@@ -31,9 +31,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <?php
-                        // TODO Login of Admin op basis van isAdmin cookie
-                        $pages = array("Menu", "Contact", "Login");
 
+                        // Login of Admin op basis van isAdmin cookie
+                        if ($_COOKIE['isAdmin'] == "0" || !isset($_COOKIE['isAdmin'])){
+                            $loginOrAdmin = "Login";
+                        } else {
+                            $loginOrAdmin = "Admin";
+                        }
+
+                        $pages = array("Menu", "Contact", $loginOrAdmin);
                         // De li tags worden hier gegenereerd
                         // Huidige pagina krijgt een active class
                         foreach ($pages as $page) {
@@ -49,7 +55,7 @@
                     </ul>
 
                     <!-- Zoek form -->
-                    <form action="index.php" method="get" class="d-flex ">
+                    <form action="index.php" method="get" class="d-flex mb-lg-0">
                         <input type="hidden" name="page" value="Menu">
                         <input class="form-control me-2" type="search" placeholder="Zoek een gerecht" name="menuItem" />
                         <button class="btn btn-outline-success" type="submit">
