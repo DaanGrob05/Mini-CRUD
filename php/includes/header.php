@@ -33,11 +33,17 @@
                         <?php
 
                         // Login of Admin op basis van isAdmin cookie
-                        if ($_COOKIE['isAdmin'] == "0" || !isset($_COOKIE['isAdmin'])){
-                            $loginOrAdmin = "Login";
+                        if (isset($_COOKIE['isAdmin'])) {
+                            if ($_COOKIE['isAdmin'] == "1"){
+                                $loginOrAdmin = "Admin";
+                            } else {
+                                $loginOrAdmin = "Login"; 
+                            }
                         } else {
-                            $loginOrAdmin = "Admin";
+                            $loginOrAdmin = "Login";
                         }
+
+                         
 
                         $pages = array("Menu", "Contact", $loginOrAdmin);
                         // De li tags worden hier gegenereerd
