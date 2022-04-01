@@ -21,7 +21,6 @@
 
     // Gerecht aanpassen
     if (isset($_POST['editMenuItem'])) {
-
         if (!empty($_POST['itemName']) && !empty($_POST['price']) && !empty($_POST['menuItemID'])) {
             $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
             $stmt = $connect->prepare($sql);

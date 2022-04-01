@@ -1,26 +1,20 @@
+// Login validatie
+console.log("validations.js loaded");
+const loginForm = document.querySelector("#loginForm");
+
+loginForm.addEventListener("submit", (e) => {
+	const username = document.querySelector("#username");
+	const password = document.querySelector("#password");
+
+	if (username.value === "" || password.value === "") {
+		alert("Beide velden moeten ingevuld zijn");
+		e.preventDefault();
+	} else {
+		return true;
+	}
+});
+
 // TODO Create
-// const createForm = document.querySelector("#createMenuItem");
-
-// createForm.addEventListener("submit", (e) => {
-// 	e.preventDefault();
-
-// 	if (validate() == false) {
-// 		console.log("e");
-// 		return true;
-// 	}
-// });
-
-// const validate = () => {
-// 	const itemNameField = document.querySelector("#itemName").value;
-// 	const priceField = document.querySelector("#price").value;
-
-// 	if (itemNameField == "" || priceField == "") {
-// 		console.log("x");
-// 	} else {
-// 		// createForm.submit();
-// 		return false;
-// 	}
-// };
 
 // TODO Aanpassen
 
