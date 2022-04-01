@@ -12,9 +12,9 @@
             $stmt->bindParam(':prijs', $_POST['price']);
             $stmt->execute();
 
-            setcookie("menuItemCreated", true, time() + $cookieTimer, "/");
+            setcookie("menuItemCreated", "1", time() + $cookieTimer, "/");
         } else {
-            setcookie("menuItemCreated", false, time() + $cookieTimer, "/");
+            setcookie("menuItemCreated", "0", time() + $cookieTimer, "/");
         }
         header ("Location: ../index.php?page=Menu");
     }
@@ -29,9 +29,9 @@
             $stmt->bindParam(":ID", $_POST['menuItemID']);
             $stmt->execute();
             
-            setcookie("menuItemEdited", true, time() + $cookieTimer, "/");
+            setcookie("menuItemEdited", "1", time() + $cookieTimer, "/");
         } else {
-            setcookie("menuItemEdited", false, time() + $cookieTimer, "/");
+            setcookie("menuItemEdited", "0", time() + $cookieTimer, "/");
         }
         header ("Location: ../index.php?page=Menu");
     }
@@ -43,7 +43,7 @@
         $stmt->bindParam(":ID", $_POST['menuItemID']);
         $stmt->execute();
 
-        setcookie("menuItemDeleted", true, time() + $cookieTimer, "/");
+        setcookie("menuItemDeleted", "1", time() + $cookieTimer, "/");
 
         header ("Location: ../index.php?page=Menu");
     }

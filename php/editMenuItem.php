@@ -12,25 +12,21 @@
         $res = $result[0];
         
         // Pas aan
-        echo "<form method='post' action='redirects/redirect.php?page=menuItem' class='pt-3'>";
+        echo "<form method='post' action='redirects/redirect.php?page=menuItem' class='pt-3' id='editMenuItem'>";
             // Item ID
-            echo "<div class='form-group'>";
-                echo "<input type='hidden' class='form-control' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
-            echo "</div>";
-            
             echo "<div class='form-group'>";
                 echo "<input type='hidden' class='form-control' name='menuItemID' value='" . $_POST['menuItemID'] . "'>";
             echo "</div>";
 
             // Naam
             echo "<div class='form-group'>";
-                echo "<label class='form-label'>Naam</label>";
+                echo "<label class='form-label' id='dishName'>Naam</label>";
                 echo "<input type='text' name='itemName' value='" . $res['naam'] . "'></input>";
             echo "</div>";
             
             // Prijs
             echo "<div class='form-group'>";
-                echo "<label class='form-label'>Prijs</label>";
+                echo "<label class='form-label' id='price'>Prijs</label>";
                 echo "<input type='number' step='0.01' name='price' value='" . $res['prijs'] . "'></input>";
             echo "</div>";
 
