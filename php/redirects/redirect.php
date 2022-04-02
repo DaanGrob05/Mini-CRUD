@@ -12,5 +12,5 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
     else {
         include_once('../includes/404.php');
     }
-} 
+}
 ?>

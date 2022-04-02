@@ -1,5 +1,11 @@
 <?php
     include_once('connection.php');
+
+    // Bepaalt hoe veel extra stappen terug moet worden gedaan, is standaard 0
+    $stepsBackPath = "";
+    for ($i = 0; $i < $mapStepsBack; $i++) {
+        $stepsBackPath .= "../";
+    }
 ?>
 
 <head>
@@ -13,7 +19,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <!-- Eigen CSS -->
-    <link rel="stylesheet" href="../css/main.css">
+    <?php echo "<link rel='stylesheet' href='" . $stepsBackPath . "../css/main.css'>"; ?>
     <title>'t Smikkelhoekje</title>
 </head>
 
@@ -22,7 +28,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php?page=Index">'t Smikkelhoekje</a>
+                <?php echo "<a class='navbar-brand' href='" . $stepsBackPath . "index.php?page=Index'>'t Smikkelhoekje</a>"; ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +37,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <?php
-
                         // Login of Admin op basis van isAdmin cookie
                         if (isset($_COOKIE['isAdmin'])) {
                             if ($_COOKIE['isAdmin'] == "1"){
@@ -47,11 +52,11 @@
                         // De li tags worden hier gegenereerd
                         // Huidige pagina krijgt een active class
                         foreach ($pages as $page) {
-                            echo "<li class=\"nav-item\">";
+                            echo "<li class='nav-item'>";
                             if ($page == $activePage) {
-                                echo "<a href=\"index.php?page=$page\" class=\"nav-link active\">$page</a>";
+                                echo "<a href='" . $stepsBackPath . "index.php?page=$page' class='nav-link active'>$page</a>";
                             } else {
-                                echo "<a href=\"index.php?page=$page\" class=\"nav-link\">$page</a>";
+                                echo "<a href='" . $stepsBackPath . "index.php?page=$page' class='nav-link'>$page</a>";
                             }
                             echo "</li>";
                         }
