@@ -40,11 +40,6 @@
         }
     ?>
 
-    <!-- Voeg nieuw gerecht toe -->
-    <button type="button" class="btn btn-primary mt-2 mb-2"><a href="index.php?page=Create"
-            class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
-    <br>
-
     <!-- Tabel voor alle gerechten -->
     <?php
         $gerecht = $result[0];
@@ -61,11 +56,6 @@
                     echo "<td>" . $res['naam'] . "</td>";
                     echo "<td>" . $res['prijs'] . "</td>";
                     echo "<td>";
-                        // Aanpas knop
-                        echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
-                        echo "<input type='hidden' name='menuItemID' class='' value='" . $res['ID'] . "'>";
-                        echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
-                        echo "</form>";
                     echo "</td>";
                 echo "</tr>";
             }

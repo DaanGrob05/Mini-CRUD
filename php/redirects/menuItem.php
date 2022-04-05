@@ -16,7 +16,7 @@
         } else {
             setcookie("menuItemCreated", "0", time() + $cookieTimer, "/");
         }
-        header ("Location: ../index.php?page=Menu");
+        header ("Location: ../adminPages/admin.php?page=Menu");
     }
 
     // Gerecht aanpassen
@@ -33,7 +33,7 @@
         } else {
             setcookie("menuItemEdited", "0", time() + $cookieTimer, "/");
         }
-        header ("Location: ../index.php?page=Menu");
+        header ("Location: ../adminPages/admin.php?page=Menu");
     }
 
     // Gerecht verwijderen
@@ -45,6 +45,6 @@
 
         setcookie("menuItemDeleted", "1", time() + $cookieTimer, "/");
 
-        header ("Location: ../index.php?page=Menu");
+        header ("Location: ../adminPages/admin.php?page=Menu");
     }
 ?>
