@@ -13,3 +13,7 @@
     </form>
 </div>
 
+<!-- link to adminPages/admin.php -->
+<div class="container">
+    <a href="adminPages/admin.php" class="btn btn-primary mt-3">Admin</a>
+</div>

@@ -53,14 +53,28 @@
                         // Huidige pagina krijgt een active class
                         foreach ($pages as $page) {
                             echo "<li class='nav-item'>";
+                            echo "<a href='" . $stepsBackPath . "index.php?page=$page' class='nav-link ";
                             if ($page == $activePage) {
-                                echo "<a href='" . $stepsBackPath . "index.php?page=$page' class='nav-link active'>$page</a>";
-                            } else {
-                                echo "<a href='" . $stepsBackPath . "index.php?page=$page' class='nav-link'>$page</a>";
+                                echo "active";
                             }
-                            echo "</li>";
+                            echo "'>$page</a></li>";
                         }
                         ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://www.google.com" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Admin
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <?php echo "<li><a class='dropdown-item' href='" . $stepsBackPath . "adminPages/admin.php?page=Menu'>Menu</a></li>" ?>
+                                <?php echo "<li><a class='dropdown-item' href='" . $stepsBackPath . "adminPages/admin.php?page=Messages'>Messages</a></li>" ?>
+                                <?php echo "<li><a class='dropdown-item' href='" . $stepsBackPath . "adminPages/admin.php?page=Reserveringen'>Reserveringen</a></li>" ?>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <!-- Zoek form -->
