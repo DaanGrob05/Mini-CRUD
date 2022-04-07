@@ -1,3 +1,1 @@
-<?php
-    echo "<h1>De pagina " . $_GET['page'] . " is niet gevonden, probeer het opnieuw.</h1>"
-?>
+<h1>De pagina <?php echo $_GET['page']?> is niet gevonden, probeer het opnieuw.</h1>

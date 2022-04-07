@@ -14,6 +14,7 @@
 ?>
 
 <div class="container">
+    <!-- TODO Cookies veranderen naar SESSION -->
     <!-- Laat een succes bericht zien als er een gerecht aangepast of verwijderd is -->
     <?php
         // Succes of error message weergeven van gerecht toevoegen
