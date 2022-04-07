@@ -41,25 +41,19 @@
     ?>
 
     <!-- Tabel voor alle gerechten -->
-    <?php
-        $gerecht = $result[0];
-        echo "<table class='table table-sm table-hover table-striped w-75'>";
-            echo "<thead>";
-                echo "<th scope='col'>Naam</th>";
-                echo "<th scope='col'>Prijs</th>";
-                echo "<th scope='col'></th>";
-            echo "</thead>";
-            echo "<tbody>";
-            // Voor elk gerecht word een row gemaakt
-            foreach ($result as $res) {
-                echo "<tr>";
-                    echo "<td>" . $res['naam'] . "</td>";
-                    echo "<td>" . $res['prijs'] . "</td>";
-                    echo "<td>";
-                    echo "</td>";
-                echo "</tr>";
-            }
-            echo "</tbody>";
-        echo "</table>";
-    ?>
+    <?php $gerecht = $result[0]; ?>
+    <table class="table table-sm table-hover table-striped w-75">
+        <thead>
+            <th scope="col">Naam</th>
+            <th scope="col">Prijs</th>
+        </thead>
+        <tbody>
+            <?php foreach ($result as $res) { ?>
+                <tr>
+                    <td><?php echo $res['naam']; ?></td>
+                    <td><?php echo $res['prijs']; ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 </div>
