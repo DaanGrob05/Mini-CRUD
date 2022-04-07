@@ -5,6 +5,7 @@
     } else {
         $activePage = "Index";
     }
+    $mapStepsBack = 0;
     include_once ('includes/header.php');
 
     // Main Content

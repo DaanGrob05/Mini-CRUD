@@ -12,16 +12,15 @@
             $stmt->bindParam(':prijs', $_POST['price']);
             $stmt->execute();
 
-            setcookie("menuItemCreated", true, time() + $cookieTimer, "/");
+            setcookie("menuItemCreated", "1", time() + $cookieTimer, "/");
         } else {
-            setcookie("menuItemCreated", false, time() + $cookieTimer, "/");
+            setcookie("menuItemCreated", "0", time() + $cookieTimer, "/");
         }
-        header ("Location: ../index.php?page=Menu");
+        header ("Location: ../adminPages/admin.php?page=Menu");
     }
 
     // Gerecht aanpassen
     if (isset($_POST['editMenuItem'])) {
-
         if (!empty($_POST['itemName']) && !empty($_POST['price']) && !empty($_POST['menuItemID'])) {
             $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
             $stmt = $connect->prepare($sql);
@@ -30,11 +29,11 @@
             $stmt->bindParam(":ID", $_POST['menuItemID']);
             $stmt->execute();
             
-            setcookie("menuItemEdited", true, time() + $cookieTimer, "/");
+            setcookie("menuItemEdited", "1", time() + $cookieTimer, "/");
         } else {
-            setcookie("menuItemEdited", false, time() + $cookieTimer, "/");
+            setcookie("menuItemEdited", "0", time() + $cookieTimer, "/");
         }
-        header ("Location: ../index.php?page=Menu");
+        header ("Location: ../adminPages/admin.php?page=Menu");
     }
 
     // Gerecht verwijderen
@@ -44,8 +43,8 @@
         $stmt->bindParam(":ID", $_POST['menuItemID']);
         $stmt->execute();
 
-        setcookie("menuItemDeleted", true, time() + $cookieTimer, "/");
+        setcookie("menuItemDeleted", "1", time() + $cookieTimer, "/");
 
-        header ("Location: ../index.php?page=Menu");
+        header ("Location: ../adminPages/admin.php?page=Menu");
     }
 ?>

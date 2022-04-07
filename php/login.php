@@ -12,14 +12,14 @@
 <h3>Als je admin rechten hebt kun je hier inloggen</h3>
 </div>
 <div class="container pt-3 w-50">
-    <form action="redirects/redirect.php?page=login" method="post">
+    <form action="redirects/redirect.php?page=login" method="post" id="loginForm">
         <div class="form-group">
             <label class="form-label">Gebruikersnaam</label>
-            <input type="text" class="form-control" name="username" value="">
+            <input type="text" class="form-control" id="username" name="username" value="">
         </div>
         <div class="form-group mt-3">
             <label class="form-label">Wachtwoord</label>
-            <input type="password" class="form-control" name="password" value="">
+            <input type="password" class="form-control" id="password" name="password" value="">
         </div>
         <button type="submit" class="btn btn-primary mt-3" name="login">Log in</button>
     </form>

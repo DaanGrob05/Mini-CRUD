@@ -18,7 +18,7 @@
     <?php
         // Succes of error message weergeven van gerecht toevoegen
         if (isset($_COOKIE['menuItemCreated'])) {
-            if ($_COOKIE['menuItemCreated']) {
+            if ($_COOKIE['menuItemCreated'] == "1") {
                 echo "Gerecht is toegevoegd <br>";
             } else {
                 echo "Er is een fout opgetreden bij het toevoegen van gerecht <br>";
@@ -27,7 +27,7 @@
 
         // Succes of error message weergeven van gerecht aanpassen
         if (isset($_COOKIE['menuItemEdited'])) {
-            if ($_COOKIE['menuItemEdited']) {
+            if ($_COOKIE['menuItemEdited'] == "1") {
                 echo "Gerecht is aangepast <br>";
             } else {
                 echo "Er is een fout opgetreden bij het aanpassen van gerecht <br>";
@@ -40,36 +40,20 @@
         }
     ?>
 
-    <!-- Voeg nieuw gerecht toe -->
-    <button type="button" class="btn btn-primary mt-2 mb-2"><a href="index.php?page=Create"
-            class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
-    <br>
-
     <!-- Tabel voor alle gerechten -->
-    <?php
-        $gerecht = $result[0];
-        echo "<table class='table table-sm table-hover table-striped w-75'>";
-            echo "<thead>";
-                echo "<th scope='col'>Naam</th>";
-                echo "<th scope='col'>Prijs</th>";
-                echo "<th scope='col'></th>";
-            echo "</thead>";
-            echo "<tbody>";
-            // Voor elk gerecht word een row gemaakt
-            foreach ($result as $res) {
-                echo "<tr>";
-                    echo "<td>" . $res['naam'] . "</td>";
-                    echo "<td>" . $res['prijs'] . "</td>";
-                    echo "<td>";
-                        // Aanpas knop
-                        echo "<form method='post' class='form-control-sm' action='index.php?page=editMenuItem'>";
-                        echo "<input type='hidden' name='menuItemID' class='' value='" . $res['ID'] . "'>";
-                        echo "<button type='submit' class='btn btn-primary btn-sm'>Aanpassen</button>";
-                        echo "</form>";
-                    echo "</td>";
-                echo "</tr>";
-            }
-            echo "</tbody>";
-        echo "</table>";
-    ?>
+    <?php $gerecht = $result[0]; ?>
+    <table class="table table-sm table-hover table-striped w-75">
+        <thead>
+            <th scope="col">Naam</th>
+            <th scope="col">Prijs</th>
+        </thead>
+        <tbody>
+            <?php foreach ($result as $res) { ?>
+                <tr>
+                    <td><?php echo $res['naam']; ?></td>
+                    <td><?php echo $res['prijs']; ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 </div>
