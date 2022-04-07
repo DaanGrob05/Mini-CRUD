@@ -61,7 +61,7 @@
                     <td><?php echo $res['prijs']?></td>
                     <td>
                         <form method="post" class="form-control-sm" action="admin.php?page=editMenuItem">
-                            <input type="hidden" name="menuItemID" class="" value="<?php echo $res['ID']?>">
+                            <input type="hidden" name="menuItemID" value="<?php echo $res['ID']?>">
                             <button type="submit" class="btn btn-primary btn-sm">Aanpassen</button>
                         </form>
                     </td>

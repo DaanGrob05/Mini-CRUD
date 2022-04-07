@@ -1,50 +1,83 @@
-// // Login validatie
-// const loginForm = document.querySelector("#loginForm");
+// TODO Zoek gerecht
 
-// loginForm.addEventListener("submit", (e) => {
-// 	const username = document.querySelector("#username");
-// 	const password = document.querySelector("#password");
+const getFormElement = (form) => {
+	const formElement = document.querySelector(`#${form}`);
 
-// 	if (username.value === "" || password.value === "") {
-// 		alert("Beide velden moeten ingevuld zijn");
-// 		e.preventDefault();
-// 	} else if (username.value.length > 255) {
-// 		alert("Gebruikersnaam mag niet meer dan 255 karakters bevatten");
-// 		e.preventDefault();
-// 	} else {
-// 		return true;
-// 	}
-// });
+	return new Promise((resolve, reject) => {
+		if (formElement) {
+			resolve(formElement);
+		} else {
+			reject(console.log(`Form ${form} not found`));
+		}
+	});
+};
 
-// // TODO Create
-// const createForm = document.querySelector("#createForm");
+loginValidate = async () => {
+	try {
+		const editFormElement = await getFormElement("loginForm");
 
-// createForm.addEventListener("submit", (e) => {
-// 	const name = document.querySelector("#name");
-// 	const price = document.querySelector("#price");
+		const username = document.querySelector("#username");
+		const password = document.querySelector("#password");
 
-// 	if (name.value === "" || price.value === "") {
-// 		alert("Beide velden moeten ingevuld zijn");
-// 		e.preventDefault();
-// 	} else {
-// 		return true;
-// 	}
-// });
+		editFormElement.addEventListener("submit", (e) => {
+			if (username.value === "" || password.value === "") {
+				alert("Beide velden moeten ingevuld zijn");
+				e.preventDefault();
+			} else if (username.value.length > 255) {
+				alert(
+					"Gebruikersnaam mag niet meer dan 255 karakters bevatten"
+				);
+				e.preventDefault();
+			} else {
+				return true;
+			}
+		});
+	} catch (error) {
+		console.log("error");
+	}
+};
 
-// // TODO Aanpassen
-// const editMenuItemForm = document.querySelector("#editMenuItem");
+menuItemValidate = async (form) => {
+	try {
+		const formElement = await getFormElement(form);
 
-// editMenuItemForm.addEventListener("submit", (e) => {
-// 	const dishName = document.querySelector("#dishName");
-// 	const price = document.querySelector("#price");
+		const itemName = document.querySelector("#itemName");
+		const price = document.querySelector("#price");
 
-// 	if (dishName.value === "" || price.value == "") {
-// 		alert("Beide velden moeten ingevuld zijn");
-// 		e.preventDefault();
-// 	} else {
-// 		return true;
-// 	}
-// });
-// // TODO Contact Message
+		formElement.addEventListener("submit", (e) => {
+			if (itemName.value === "" || price.value === "") {
+				alert("Beide velden moeten ingevuld zijn");
+				e.preventDefault();
+			} else {
+				return true;
+			}
+		});
+	} catch (error) {
+		console.log(error);
+	}
+};
 
-// // TODO Zoek gerecht
+contactValidate = async () => {
+	try {
+		const contactFormElement = await getFormElement("contactForm");
+
+		const name = document.querySelector("#name");
+		const messageText = document.querySelector("#messageText");
+
+		contactFormElement.addEventListener("submit", (e) => {
+			if (name.value === "" || messageText.value === "") {
+				alert("Beide velden moeten ingevuld zijn");
+				e.preventDefault();
+			} else {
+				return true;
+			}
+		});
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+loginValidate();
+contactValidate();
+menuItemValidate("createForm");
+menuItemValidate("editForm");

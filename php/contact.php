@@ -23,14 +23,14 @@
     <!-- Bericht Form -->
     <div class="container pt-3 w-50">
         <h3 class="text-center">Stuur ons een direct bericht</h3>
-        <form action="redirects/redirect.php?page=contactMessage" method="post">
+        <form action="redirects/redirect.php?page=contactMessage" method="post" id="contactForm">
             <div class="form-group">
                 <label class="form-label">Naam</label>
-                <input type="text" class="form-control" name="clientName">
+                <input type="text" class="form-control" id="name" name="clientName">
             </div>
             <div class="form-group mt-2">
                 <label for="exampleFormControlTextarea1">Bericht</label>
-                <textarea class="form-control" rows="4" name="messageText"></textarea>
+                <textarea class="form-control" id="messageText" rows="4" name="messageText"></textarea> 
             </div>
             <button type="submit" class="btn btn-primary mt-3">
                 Verstuur Bericht</button>

@@ -9,8 +9,15 @@
 
 <!-- TODO Toastr werkend maken -->
 
+<?php
+// Bepaalt hoe veel extra stappen terug moet worden gedaan, is standaard 0
+    $stepsBackPath = "";
+    for ($i = 0; $i < $mapStepsBack; $i++) {
+        $stepsBackPath .= "../";
+    }
+?>
 <!-- Validatie -->
-<script src="../js/validations.js"></script>    
+<script src="<?php echo $stepsBackPath?>../js/validations.js"></script>    
 
 </body>
 
