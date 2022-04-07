@@ -1,29 +1,50 @@
-// TODO Create
-// const createForm = document.querySelector("#createMenuItem");
+// // Login validatie
+// const loginForm = document.querySelector("#loginForm");
 
-// createForm.addEventListener("submit", (e) => {
-// 	e.preventDefault();
+// loginForm.addEventListener("submit", (e) => {
+// 	const username = document.querySelector("#username");
+// 	const password = document.querySelector("#password");
 
-// 	if (validate() == false) {
-// 		console.log("e");
+// 	if (username.value === "" || password.value === "") {
+// 		alert("Beide velden moeten ingevuld zijn");
+// 		e.preventDefault();
+// 	} else if (username.value.length > 255) {
+// 		alert("Gebruikersnaam mag niet meer dan 255 karakters bevatten");
+// 		e.preventDefault();
+// 	} else {
 // 		return true;
 // 	}
 // });
 
-// const validate = () => {
-// 	const itemNameField = document.querySelector("#itemName").value;
-// 	const priceField = document.querySelector("#price").value;
+// // TODO Create
+// const createForm = document.querySelector("#createForm");
 
-// 	if (itemNameField == "" || priceField == "") {
-// 		console.log("x");
+// createForm.addEventListener("submit", (e) => {
+// 	const name = document.querySelector("#name");
+// 	const price = document.querySelector("#price");
+
+// 	if (name.value === "" || price.value === "") {
+// 		alert("Beide velden moeten ingevuld zijn");
+// 		e.preventDefault();
 // 	} else {
-// 		// createForm.submit();
-// 		return false;
+// 		return true;
 // 	}
-// };
+// });
 
-// TODO Aanpassen
+// // TODO Aanpassen
+// const editMenuItemForm = document.querySelector("#editMenuItem");
 
-// TODO Contact Message
+// editMenuItemForm.addEventListener("submit", (e) => {
+// 	const dishName = document.querySelector("#dishName");
+// 	const price = document.querySelector("#price");
 
-// TODO Zoek gerecht
+// 	if (dishName.value === "" || price.value == "") {
+// 		alert("Beide velden moeten ingevuld zijn");
+// 		e.preventDefault();
+// 	} else {
+// 		return true;
+// 	}
+// });
+// // TODO Contact Message
+
+// // TODO Zoek gerecht

@@ -8,7 +8,9 @@
 </script>
 
 <!-- TODO Toastr werkend maken -->
-<script src="../js/validations.js"></script>
+
+<!-- Validatie -->
+<script src="../js/validations.js"></script>    
 
 </body>
 
