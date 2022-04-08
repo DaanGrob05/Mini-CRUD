@@ -79,7 +79,7 @@
                     </ul>
 
                     <!-- Zoek form -->
-                    <form action="index.php" method="get" class="d-flex mb-lg-0">
+                    <form action="<?php echo $stepsBackPath?>index.php?page=Menu" method="get" class="d-flex mb-lg-0">
                         <input type="hidden" name="page" value="Menu">
                         <input class="form-control me-2" type="search" placeholder="Zoek een gerecht" name="menuItem" />
                         <button class="btn btn-outline-success" type="submit">

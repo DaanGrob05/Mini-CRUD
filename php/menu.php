@@ -1,7 +1,7 @@
 <?php
     // Bepaal welke query word uitgevoerd op de gerechten
     if(isset($_GET['menuItem']) && !empty($_GET['menuItem'])){
-    $sql = "SELECT * FROM gerecht WHERE naam LIKE CONCAT('%', :naam, '%')";
+        $sql = "SELECT * FROM gerecht WHERE naam LIKE CONCAT('%', :naam, '%')";
         $stmt = $connect->prepare($sql);
         $stmt->bindParam(":naam", $_GET['menuItem']);
     } else {
@@ -41,7 +41,6 @@
     ?>
 
     <!-- Tabel voor alle gerechten -->
-    <?php $gerecht = $result[0]; ?>
     <table class="table table-sm table-hover table-striped w-75">
         <thead>
             <th scope="col">Naam</th>

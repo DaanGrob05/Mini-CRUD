@@ -32,7 +32,7 @@
                 <label for="exampleFormControlTextarea1">Bericht</label>
                 <textarea class="form-control" id="messageText" rows="4" name="messageText"></textarea> 
             </div>
-            <button type="submit" class="btn btn-primary mt-3">
+            <button type="submit" name="create" class="btn btn-primary mt-3">
                 Verstuur Bericht</button>
         </form>
 
