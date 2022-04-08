@@ -3,11 +3,13 @@
     $stmt = $connect->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll();
-
-    
     ?>
 
-    <div class="container">
+
+<div class="container">
+        <!-- Terug knop -->
+        <a href="../index.php?page=admin" class="btn btn-danger">Naar dashboard</a>
+
         <?php
             if (isset($_COOKIE['messageDeleted'])) {
                     if ($_COOKIE['messageDeleted'] == "1") {

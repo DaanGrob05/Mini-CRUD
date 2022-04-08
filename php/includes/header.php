@@ -60,22 +60,6 @@
                             echo "'>$page</a></li>";
                         }
                         ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Admin
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <?php echo "<li><a class='dropdown-item' href='" . $stepsBackPath . "adminPages/admin.php?page=Menu'>Menu</a></li>" ?>
-                                <?php echo "<li><a class='dropdown-item' href='" . $stepsBackPath . "adminPages/admin.php?page=Messages'>Berichten</a></li>" ?>
-                                <?php echo "<li><a class='dropdown-item' href='" . $stepsBackPath . "adminPages/admin.php?page=Reserveringen'>Reserveringen</a></li>" ?>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <?php echo"<li><a class='dropdown-item' href='" . $stepsBackPath . "index.php?page=Admin'>Dashboard</a></li>" ?>
-                                
-                            </ul>
-                        </li>
                     </ul>
 
                     <!-- Zoek form -->

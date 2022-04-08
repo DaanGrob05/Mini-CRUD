@@ -44,7 +44,10 @@
     <!-- Voeg nieuw gerecht toe -->
     <button type="button" class="btn btn-primary mt-2 mb-2"><a href="admin.php?page=createMenuItem"
             class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
-    <br>
+    <!-- <br> -->
+    <!-- Terug knop -->
+    <a href="../index.php?page=admin" class="btn btn-danger">Naar dashboard</a>
+
 
     <!-- Tabel voor alle gerechten -->
     <?php $gerecht = $result[0]; ?>
