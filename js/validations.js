@@ -20,15 +20,25 @@ loginValidate = async () => {
 		const password = document.querySelector("#password");
 
 		editFormElement.addEventListener("submit", (e) => {
+			// Geen waardes ingevuld
 			if (username.value === "" || password.value === "") {
-				alert("Beide velden moeten ingevuld zijn");
 				e.preventDefault();
-			} else if (username.value.length > 255) {
-				alert(
-					"Gebruikersnaam mag niet meer dan 255 karakters bevatten"
-				);
-				e.preventDefault();
+				if (username.value == "") {
+					username.style.border = "2px solid red";
+
+					const usernameErrors = document.createElement("p");
+					usernameErrors.append("* Gebruikersnaam is verplicht");
+					username.parentNode.appendChild(usernameErrors);
+				}
+				if (password.value == "") {
+					password.style.border = "2px solid red";
+
+					const passwordErrors = document.createElement("p");
+					passwordErrors.append("* Wachtwoord is verplicht");
+					password.parentNode.appendChild(passwordErrors);
+				}
 			} else {
+				// Alles in orde
 				return true;
 			}
 		});
