@@ -56,8 +56,21 @@ menuItemValidate = async (form) => {
 
 		formElement.addEventListener("submit", (e) => {
 			if (itemName.value === "" || price.value === "") {
-				alert("Beide velden moeten ingevuld zijn");
 				e.preventDefault();
+				if (itemName.value === "") {
+					itemName.style.border = "2px solid red";
+
+					const itemNameErrors = document.createElement("p");
+					itemNameErrors.append("* Naam is verplicht");
+					itemName.parentNode.appendChild(itemNameErrors);
+				}
+				if (price.value === "") {
+					price.style.border = "2px solid red";
+
+					const priceErrors = document.createElement("p");
+					priceErrors.append("* Prijs is verplicht");
+					price.parentNode.appendChild(priceErrors);
+				}
 			} else {
 				return true;
 			}
@@ -76,8 +89,21 @@ contactValidate = async () => {
 
 		contactFormElement.addEventListener("submit", (e) => {
 			if (name.value === "" || messageText.value === "") {
-				alert("Beide velden moeten ingevuld zijn");
 				e.preventDefault();
+				if (name.value === "") {
+					name.style.border = "2px solid red";
+
+					const nameErrors = document.createElement("p");
+					nameErrors.append("* Naam is verplicht");
+					name.parentNode.appendChild(nameErrors);
+				}
+				if (messageText.value === "") {
+					messageText.style.border = "2px solid red";
+
+					const messageTextErrors = document.createElement("p");
+					messageTextErrors.append("* Bericht is verplicht");
+					messageText.parentNode.appendChild(messageTextErrors);
+				}
 			} else {
 				return true;
 			}
