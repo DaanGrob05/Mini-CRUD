@@ -6,10 +6,11 @@
         $stmt->bindParam(":username", $_POST['username']);
         $stmt->bindParam(":password", $_POST['password']);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetch();
     
         if(count($result) > 0){
             setcookie("isAdmin", "1", time() + 60000, "/");
+            setcookie("adminLevel", $result['adminLevel'], time() + 60000, "/");
             header("Location: ../index.php?page=Admin");
         } else {
             setcookie("isAdmin", "0", time() + 60000, "/");

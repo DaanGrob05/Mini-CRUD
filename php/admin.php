@@ -16,6 +16,8 @@
 <!-- Panel naar de adminpagina's -->
 <div class="container">
     <div class="row">
+
+        <?php if ($_COOKIE['adminLevel'] == 0) { ?>
         <div class="col-sm-4 m-1">
             <div class="card">
                 <div class="card-body">
@@ -25,6 +27,9 @@
                 </div>
             </div>
         </div>
+        <?php } ?>
+
+
         <div class="col-sm-4 m-1">
             <div class="card">
                 <div class="card-body">

@@ -1,4 +1,9 @@
 <?php
+    // Niet toegestane medewerkers terugsturen naar admin pagina
+    if ($_COOKIE['adminLevel'] > 0) {
+        header("Location: ../index.php?page=admin");
+    }
+
     // Bepaal welke query word uitgevoerd op de gerechten
     if(isset($_GET['menuItem']) && !empty($_GET['menuItem'])){
     $sql = "SELECT * FROM gerecht WHERE naam LIKE CONCAT('%', :naam, '%')";
