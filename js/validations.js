@@ -28,14 +28,14 @@ loginValidate = async () => {
 
 					const usernameErrors = document.createElement("p");
 					usernameErrors.append("* Gebruikersnaam is verplicht");
-					username.parentNode.appendChild(usernameErrors);
+					username.parentNode.append(usernameErrors);
 				}
 				if (password.value == "") {
 					password.style.border = "2px solid red";
 
 					const passwordErrors = document.createElement("p");
 					passwordErrors.append("* Wachtwoord is verplicht");
-					password.parentNode.appendChild(passwordErrors);
+					password.parentNode.appendo(passwordErrors);
 				}
 			} else {
 				// Alles in orde

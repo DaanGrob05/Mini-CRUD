@@ -1,6 +1,4 @@
 <?php
-    // TODO Categorie toevoegen aan gerechten tabel
-    // TODO Group by Categorie
     $cookieTimer = 3;
    
     // Gerecht toevoegen
