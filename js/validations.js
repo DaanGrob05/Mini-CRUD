@@ -52,10 +52,15 @@ menuItemValidate = async (form) => {
 		const formElement = await getFormElement(form);
 
 		const itemName = document.querySelector("#itemName");
+		const itemDescription = document.querySelector("#itemDescription");
 		const price = document.querySelector("#price");
 
 		formElement.addEventListener("submit", (e) => {
-			if (itemName.value === "" || price.value === "") {
+			if (
+				itemName.value === "" ||
+				price.value === "" ||
+				itemDescription.value === ""
+			) {
 				e.preventDefault();
 				if (itemName.value === "") {
 					itemName.style.border = "2px solid red";
@@ -64,6 +69,17 @@ menuItemValidate = async (form) => {
 					itemNameErrors.append("* Naam is verplicht");
 					itemName.parentNode.appendChild(itemNameErrors);
 				}
+
+				if (itemDescription.value === "") {
+					itemDescription.style.border = "2px solid red";
+
+					const itemDescriptionErrors = document.createElement("p");
+					itemDescriptionErrors.append("* Beschrijving is verplicht");
+					itemDescription.parentNode.appendChild(
+						itemDescriptionErrors
+					);
+				}
+
 				if (price.value === "") {
 					price.style.border = "2px solid red";
 

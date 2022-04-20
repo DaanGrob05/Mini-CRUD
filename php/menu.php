@@ -44,12 +44,14 @@
     <table class="table table-sm table-hover table-striped w-75">
         <thead>
             <th scope="col">Naam</th>
+            <th scope="col">Beschrijving</th>
             <th scope="col">Prijs</th>
         </thead>
         <tbody>
             <?php foreach ($result as $res) { ?>
                 <tr>
                     <td><?php echo $res['naam']; ?></td>
+                    <td><?php echo $res['beschrijving']; ?></td>
                     <td><?php echo $res['prijs']; ?></td>
                 </tr>
             <?php } ?>

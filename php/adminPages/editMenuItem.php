@@ -1,5 +1,5 @@
 <?php
-    $sql = "SELECT naam, prijs FROM gerecht WHERE ID = :ID";
+    $sql = "SELECT naam, prijs, beschrijving FROM gerecht WHERE ID = :ID";
     $stmt = $connect->prepare($sql);
     $stmt->bindParam(":ID", $_POST['menuItemID']);
     $stmt->execute();
@@ -19,6 +19,12 @@
         <div class="form-group">
             <label class="form-label">Naam</label>
             <input type="text" name="itemName" id="itemName" value="<?php echo $res['naam'] ?>"></input>
+        </div>
+        
+        <!-- Beschrijving -->
+        <div class="form-group">
+            <label class="form-label">Gerecht Beschrijving</label>
+            <input type="text" name="itemDescription" id="itemDescription" rows="5" value="<?php echo $res['beschrijving'] ?>"></input>
         </div>
 
         <!-- Prijs -->

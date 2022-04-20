@@ -3,10 +3,11 @@
    
     // Gerecht toevoegen
     if (isset($_POST['createMenuItem'])) {
-        if (!empty($_POST['itemName']) && !empty($_POST['price'])) {
-            $sql = "INSERT INTO `gerecht`(`naam`, `prijs`) VALUES (:naam, :prijs)";
+        if (!empty($_POST['itemName']) && !empty($_POST['price']) && !empty($_POST['itemDescription'])) {
+            $sql = "INSERT INTO `gerecht`(`naam`, `beschrijving`, `prijs`) VALUES (:naam, :beschrijving, :prijs)";
             $stmt = $connect->prepare($sql);
             $stmt->bindParam(':naam', $_POST['itemName']);
+            $stmt->bindParam(':beschrijving', $_POST['itemDescription']);
             $stmt->bindParam(':prijs', $_POST['price']);
             $stmt->execute();
 
@@ -19,10 +20,11 @@
 
     // Gerecht aanpassen
     if (isset($_POST['editMenuItem'])) {
-        if (!empty($_POST['itemName']) && !empty($_POST['price']) && !empty($_POST['menuItemID'])) {
-            $sql = "UPDATE `gerecht` SET `naam`=:naam ,`prijs`=:prijs WHERE ID = :ID";
+        if (!empty($_POST['itemName']) && !empty($_POST['price']) && !empty($_POST['menuItemID']) && !empty($_POST['itemDescription'])) {
+            $sql = "UPDATE `gerecht` SET `naam`=:naam ,`beschrijving`=:beschrijving ,`prijs`=:prijs WHERE ID = :ID";
             $stmt = $connect->prepare($sql);
             $stmt->bindParam(':naam', $_POST['itemName']);
+            $stmt->bindParam(':beschrijving', $_POST['itemDescription']);
             $stmt->bindParam(':prijs', $_POST['price']);
             $stmt->bindParam(":ID", $_POST['menuItemID']);
             $stmt->execute();
