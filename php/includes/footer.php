@@ -1,5 +1,5 @@
-<footer class="footer mt-auto  p-3 text-muted bg-dark">
-    <p class="mb-0">'t Smikkelhoekje </p>
+<footer class="footer footer-light mt-auto  p-3 text-muted ">
+    <p class="mb-0 active">'t Smikkelhoekje </p>
 </footer>
 
 <!-- Bootstrap -->

@@ -25,8 +25,8 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header class="mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <?php echo "<a class='navbar-brand' href='" . $stepsBackPath . "index.php?page=Index'>'t Smikkelhoekje</a>"; ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

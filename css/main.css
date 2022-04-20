@@ -2,6 +2,10 @@ body {
 	background-color: #696969;
 }
 
+nav,
+footer {
+	background-color: #ffd700;
+}
 /* Ivan's bullshit ->*/
 .homeContainer {
 	display: flex;
