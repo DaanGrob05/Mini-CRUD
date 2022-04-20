@@ -4,7 +4,7 @@
             <label class="form-label">Gerecht Naam</label>
             <input type="text" class="form-control" id="itemName" name="itemName">
         </div>
-        <div class="form-group">
+        <div class="form-group mt-3">
             <label class="form-label">Gerecht Beschrijving</label>
             <input type="text" class="form-control" id="itemDescription" name="itemDescription">
         </div>

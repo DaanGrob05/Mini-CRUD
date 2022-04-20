@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2022 at 10:40 AM
+-- Generation Time: Apr 20, 2022 at 02:00 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -30,15 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `ID` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `adminLevel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`ID`, `username`, `password`) VALUES
-(1, 'admin', 'admin');
+INSERT INTO `admin` (`ID`, `username`, `password`, `adminLevel`) VALUES
+(1, 'admin', 'admin', 0),
+(2, 'medewerker', 'medewerker', 1);
 
 -- --------------------------------------------------------
 
@@ -69,18 +71,19 @@ INSERT INTO `bericht` (`ID`, `klantNaam`, `berichtText`) VALUES
 CREATE TABLE `gerecht` (
   `ID` int(11) NOT NULL,
   `naam` varchar(255) NOT NULL,
-  `prijs` decimal(5,2) NOT NULL
+  `prijs` decimal(5,2) NOT NULL,
+  `beschrijving` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `gerecht`
 --
 
-INSERT INTO `gerecht` (`ID`, `naam`, `prijs`) VALUES
-(2, 'Portie Bitterballen', '4.00'),
-(3, 'Pizza', '8.00'),
-(4, 'Kroket', '2.50'),
-(9, 'Patatje', '3.00');
+INSERT INTO `gerecht` (`ID`, `naam`, `prijs`, `beschrijving`) VALUES
+(2, 'Portie Bitterballen', '4.00', 'Vleesballen'),
+(3, 'Pizza', '8.00', ''),
+(4, 'Kroket', '2.50', ''),
+(9, 'Patatje', '3.00', '');
 
 --
 -- Indexes for dumped tables
@@ -112,7 +115,7 @@ ALTER TABLE `gerecht`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `bericht`
@@ -124,7 +127,7 @@ ALTER TABLE `bericht`
 -- AUTO_INCREMENT for table `gerecht`
 --
 ALTER TABLE `gerecht`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
