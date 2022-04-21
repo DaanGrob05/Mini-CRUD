@@ -23,22 +23,21 @@ loginValidate = async () => {
 		const passwordError = document.querySelector("#passwordError");
 
 		editFormElement.addEventListener("submit", (e) => {
+			// Input stijl en errors resetten
 			username.style.border = "none";
 			password.style.border = "none";
-
 			usernameError.innerHTML = "";
 			passwordError.innerHTML = "";
+
 			// Geen waardes ingevuld
 			if (username.value === "" || password.value === "") {
 				e.preventDefault();
 				if (username.value == "") {
 					username.style.border = "2px solid red";
-
 					usernameError.innerHTML = "* Naam is verplicht";
 				}
 				if (password.value == "") {
 					password.style.border = "2px solid red";
-
 					passwordError.innerHTML = "* Wachtwoord is verplicht";
 				}
 			} else {
@@ -56,10 +55,26 @@ menuItemValidate = async (form) => {
 		const formElement = await getFormElement(form);
 
 		const itemName = document.querySelector("#itemName");
+		const itemNameError = document.querySelector("#itemNameError");
+
 		const itemDescription = document.querySelector("#itemDescription");
+		const itemDescriptionError = document.querySelector(
+			"#itemDescriptionError"
+		);
+
 		const price = document.querySelector("#price");
+		const priceError = document.querySelector("#priceError");
 
 		formElement.addEventListener("submit", (e) => {
+			// Input stijl en errors resetten
+			itemName.style.border = "none";
+			itemDescription.style.border = "none";
+			price.style.border = "none";
+			itemNameError.innerHTML = "";
+			itemDescriptionError.innerHTML = "";
+			priceError.innerHTML = "";
+
+			// Geen waardes ingevuld
 			if (
 				itemName.value === "" ||
 				price.value === "" ||
@@ -68,28 +83,18 @@ menuItemValidate = async (form) => {
 				e.preventDefault();
 				if (itemName.value === "") {
 					itemName.style.border = "2px solid red";
-
-					const itemNameErrors = document.createElement("p");
-					itemNameErrors.append("* Naam is verplicht");
-					itemName.parentNode.appendChild(itemNameErrors);
+					itemNameError.innerHTML = "* Naam is verplicht";
 				}
 
 				if (itemDescription.value === "") {
 					itemDescription.style.border = "2px solid red";
-
-					const itemDescriptionErrors = document.createElement("p");
-					itemDescriptionErrors.append("* Beschrijving is verplicht");
-					itemDescription.parentNode.appendChild(
-						itemDescriptionErrors
-					);
+					itemDescriptionError.innerHTML =
+						"* Beschrijving is verplicht";
 				}
 
 				if (price.value === "") {
 					price.style.border = "2px solid red";
-
-					const priceErrors = document.createElement("p");
-					priceErrors.append("* Prijs is verplicht");
-					price.parentNode.appendChild(priceErrors);
+					priceError.innerHTML = "* Prijs is verplicht";
 				}
 			} else {
 				return true;
@@ -105,24 +110,28 @@ contactValidate = async () => {
 		const contactFormElement = await getFormElement("contactForm");
 
 		const name = document.querySelector("#name");
+		const nameError = document.querySelector("#nameError");
+
 		const messageText = document.querySelector("#messageText");
+		const messageTextError = document.querySelector("#messageTextError");
 
 		contactFormElement.addEventListener("submit", (e) => {
+			// Input stijl en errors resetten
+			name.style.border = "none";
+			messageText.style.border = "none";
+			nameError.innerHTML = "";
+			messageTextError.innerHTML = "";
+
+			// Geen waardes ingevuld
 			if (name.value === "" || messageText.value === "") {
 				e.preventDefault();
 				if (name.value === "") {
 					name.style.border = "2px solid red";
-
-					const nameErrors = document.createElement("p");
-					nameErrors.append("* Naam is verplicht");
-					name.parentNode.appendChild(nameErrors);
+					nameError.innerHTML = "* Naam is verplicht";
 				}
 				if (messageText.value === "") {
 					messageText.style.border = "2px solid red";
-
-					const messageTextErrors = document.createElement("p");
-					messageTextErrors.append("* Bericht is verplicht");
-					messageText.parentNode.appendChild(messageTextErrors);
+					messageTextError.innerHTML = "* Bericht is verplicht";
 				}
 			} else {
 				return true;

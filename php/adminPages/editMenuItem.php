@@ -19,18 +19,21 @@
         <div class="form-group">
             <label class="form-label">Naam</label>
             <input type="text" name="itemName" id="itemName" value="<?php echo $res['naam'] ?>"></input>
+            <p id="itemNameError"></p>
         </div>
         
         <!-- Beschrijving -->
         <div class="form-group">
             <label class="form-label">Gerecht Beschrijving</label>
             <input type="text" name="itemDescription" id="itemDescription" rows="5" value="<?php echo $res['beschrijving'] ?>"></input>
+            <p id="itemDescriptionError"></p>
         </div>
 
         <!-- Prijs -->
         <div class="form-group">
             <label class="form-label">Prijs</label>
             <input type="number" step="0.01" name="price" id="price" value="<?php echo $res['prijs'] ?>"></input>
+            <p id="priceError"></p>
         </div>
 
         <button type="submit" class="btn btn-primary" name="editMenuItem" value="true" >Pas Aan</button>

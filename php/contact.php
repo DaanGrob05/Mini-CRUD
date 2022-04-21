@@ -27,10 +27,12 @@
             <div class="form-group">
                 <label class="form-label">Naam</label>
                 <input type="text" class="form-control" id="name" name="clientName">
+                <p id="nameError"></p>
             </div>
             <div class="form-group mt-2">
                 <label for="exampleFormControlTextarea1">Bericht</label>
                 <textarea class="form-control" id="messageText" rows="4" name="messageText"></textarea> 
+                <p id="messageTextError"></p>
             </div>
             <button type="submit" name="create" class="btn btn-primary mt-3">
                 Verstuur Bericht</button>
