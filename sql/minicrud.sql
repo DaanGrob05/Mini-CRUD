@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2022 at 02:00 PM
+-- Generation Time: Apr 21, 2022 at 08:47 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -83,7 +83,9 @@ INSERT INTO `gerecht` (`ID`, `naam`, `prijs`, `beschrijving`) VALUES
 (2, 'Portie Bitterballen', '4.00', 'Vleesballen'),
 (3, 'Pizza', '8.00', ''),
 (4, 'Kroket', '2.50', ''),
-(9, 'Patatje', '3.00', '');
+(9, 'Patatje', '3.00', ''),
+(21, 'Frikandel', '3.00', 'Vleesstaaf'),
+(23, 'Gerecht', '2.00', 'Lekker');
 
 --
 -- Indexes for dumped tables
@@ -121,13 +123,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `bericht`
 --
 ALTER TABLE `bericht`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `gerecht`
 --
 ALTER TABLE `gerecht`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
