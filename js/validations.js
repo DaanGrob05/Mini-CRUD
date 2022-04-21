@@ -17,25 +17,29 @@ loginValidate = async () => {
 		const editFormElement = await getFormElement("loginForm");
 
 		const username = document.querySelector("#username");
+		const usernameError = document.querySelector("#usernameError");
+
 		const password = document.querySelector("#password");
+		const passwordError = document.querySelector("#passwordError");
 
 		editFormElement.addEventListener("submit", (e) => {
+			username.style.border = "none";
+			password.style.border = "none";
+
+			usernameError.innerHTML = "";
+			passwordError.innerHTML = "";
 			// Geen waardes ingevuld
 			if (username.value === "" || password.value === "") {
 				e.preventDefault();
 				if (username.value == "") {
 					username.style.border = "2px solid red";
 
-					const usernameErrors = document.createElement("p");
-					usernameErrors.append("* Gebruikersnaam is verplicht");
-					username.parentNode.append(usernameErrors);
+					usernameError.innerHTML = "* Naam is verplicht";
 				}
 				if (password.value == "") {
 					password.style.border = "2px solid red";
 
-					const passwordErrors = document.createElement("p");
-					passwordErrors.append("* Wachtwoord is verplicht");
-					password.parentNode.appendo(passwordErrors);
+					passwordError.innerHTML = "* Wachtwoord is verplicht";
 				}
 			} else {
 				// Alles in orde

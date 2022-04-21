@@ -7,14 +7,14 @@
         $stmt->bindParam(":password", $_POST['password']);
         $stmt->execute();
         $result = $stmt->fetch();
-    
-        if(count($result) > 0){
+
+        if (empty($result)) {
+            setcookie("isAdmin", "0", time() + 60000, "/");
+            header("Location: ../index.php?page=Login");
+        } else {
             setcookie("isAdmin", "1", time() + 60000, "/");
             setcookie("adminLevel", $result['adminLevel'], time() + 60000, "/");
             header("Location: ../index.php?page=Admin");
-        } else {
-            setcookie("isAdmin", "0", time() + 60000, "/");
-            header("Location: ../index.php?page=Login");
         }
     }
 

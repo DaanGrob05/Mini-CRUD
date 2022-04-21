@@ -16,10 +16,12 @@
         <div class="form-group">
             <label class="form-label">Gebruikersnaam</label>
             <input type="text" class="form-control" id="username" name="username" value="">
+            <p id="usernameError"></p>
         </div>
         <div class="form-group mt-3">
             <label class="form-label">Wachtwoord</label>
             <input type="password" class="form-control" id="password" name="password" value="">
+            <p id="passwordError"></p>
         </div>
         <button type="submit" class="btn btn-primary mt-3" name="login">Log in</button>
     </form>
