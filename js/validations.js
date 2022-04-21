@@ -1,5 +1,3 @@
-// TODO Zoek gerecht
-
 const getFormElement = (form) => {
 	const formElement = document.querySelector(`#${form}`);
 
@@ -31,6 +29,8 @@ loginValidate = async () => {
 
 			// Geen waardes ingevuld
 			if (username.value === "" || password.value === "") {
+				// Ik zei in de video dat ik de preventDefaults ging verplaatsen
+				// maar dat werkt niet dus ik heb ze laten staan
 				e.preventDefault();
 				if (username.value == "") {
 					username.style.border = "2px solid red";

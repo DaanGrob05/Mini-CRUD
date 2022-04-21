@@ -6,7 +6,8 @@ nav,
 footer {
 	background-color: #ffd700;
 }
-/* Ivan's bullshit ->*/
+
+/* Ivan's code ->*/
 .homeContainer {
 	display: flex;
 	justify-content: center;

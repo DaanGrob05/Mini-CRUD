@@ -28,5 +28,3 @@
         <button type="submit" class="btn btn-primary mt-3" name="login">Log in</button>
     </form>
 </div>
-
-<!-- <script src="js/validation.js"></script> -->

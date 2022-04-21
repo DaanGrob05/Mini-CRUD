@@ -4,22 +4,13 @@
         header("Location: ../index.php?page=admin");
     }
 
-    // Bepaal welke query word uitgevoerd op de gerechten
-    if(isset($_GET['menuItem']) && !empty($_GET['menuItem'])){
-    $sql = "SELECT * FROM gerecht WHERE naam LIKE CONCAT('%', :naam, '%')";
-        $stmt = $connect->prepare($sql);
-        $stmt->bindParam(":naam", $_GET['menuItem']);
-    } else {
-        $sql = "SELECT * FROM gerecht";
-        $stmt = $connect->prepare($sql);
-    }
-
+    $sql = "SELECT * FROM gerecht";
+    $stmt = $connect->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll();
 ?>
 
 <div class="container">
-    <!-- TODO Cookies veranderen naar SESSION -->
     <!-- Laat een succes bericht zien als er een gerecht aangepast of verwijderd is -->
     <?php
         // Succes of error message weergeven van gerecht toevoegen
@@ -49,7 +40,6 @@
     <!-- Voeg nieuw gerecht toe -->
     <button type="button" class="btn btn-primary mt-2 mb-2"><a href="admin.php?page=createMenuItem"
             class="text-light text-decoration-none">Voeg nieuw gerecht toe</a></button>
-    <!-- <br> -->
     <!-- Terug knop -->
     <a href="../index.php?page=admin" class="btn btn-danger">Naar dashboard</a>
 
